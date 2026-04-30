@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { COMPANY, PYEONG_OPTIONS, REGIONS, SERVICE_OPTIONS } from '@/app/lib/data';
+import { supabase } from '@/app/lib/supabase';
 import { ArrowRight, CheckCircle, ChevronDown, KakaoBubble } from './Icons';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
@@ -34,8 +35,22 @@ export default function QuoteForm() {
     if (!form.consent) return setError('개인정보 수집·이용에 동의해 주세요.');
 
     setStatus('submitting');
-    await new Promise((r) => setTimeout(r, 800));
+    const { error: insertError } = await supabase.from('inquiries').insert({
+      name: form.name.trim(),
+      phone: form.phone,
+      region: form.region,
+      service: form.service,
+      size: form.size,
+      consent: form.consent,
+    });
+
+    if (insertError) {
+      setStatus('error');
+      setError('신청 접수에 실패했습니다. 잠시 후 다시 시도해 주세요.');
+      return;
+    }
     setStatus('success');
+    setForm((f) => ({ ...f, name: '', phone: '', consent: false }));
   };
 
   return (
