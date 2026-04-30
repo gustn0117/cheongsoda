@@ -6,6 +6,7 @@ out
 *.tsbuildinfo
 .env*
 !.env.example
+!.env.production
 
 # Source assets (duplicates of /public)
 /소개
