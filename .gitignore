@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+.DS_Store
+*.log
+*.tsbuildinfo
+.env*
+!.env.example
+
+# Source assets (duplicates of /public)
+/소개
+/후기
+/동영상
+/로고
