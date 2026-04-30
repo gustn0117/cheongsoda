@@ -20,9 +20,11 @@ export default function Services() {
 
         <div className="mt-10 grid gap-4 sm:mt-16 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s, i) => (
-            <article
+            <a
               key={s.slug}
-              className="group relative overflow-hidden rounded-2xl border border-navy-100 bg-white shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-navy-lg sm:rounded-3xl"
+              href="#contact"
+              aria-label={`${s.title} 문의하기`}
+              className="group relative block overflow-hidden rounded-2xl border border-navy-100 bg-white shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-navy-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-600 focus-visible:ring-offset-2 sm:rounded-3xl"
               style={{ animationDelay: `${i * 60}ms` }}
             >
               <div className="relative aspect-[4/3] overflow-hidden">
@@ -49,13 +51,13 @@ export default function Services() {
                 </p>
                 <div className="mt-4 flex items-center justify-between border-t border-navy-100 pt-3.5 text-sm sm:mt-5 sm:pt-4">
                   <span className="font-semibold text-ink">전문 장비 · 직영팀</span>
-                  <span className="inline-flex items-center gap-1 font-bold text-navy-600 transition group-hover:gap-2">
-                    자세히
+                  <span className="inline-flex items-center gap-1 font-bold text-navy-600 transition group-hover:gap-2 group-hover:text-navy-700">
+                    문의하기
                     <ArrowRight size={14} />
                   </span>
                 </div>
               </div>
-            </article>
+            </a>
           ))}
         </div>
 
