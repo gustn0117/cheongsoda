@@ -10,7 +10,7 @@ export default function Stats() {
             <h2 className="heading-section mt-3 text-[1.75rem] text-ink sm:mt-4 sm:text-4xl lg:text-5xl break-keep">
               숫자로 증명하는
               <br />
-              <span className="text-navy-600">청소다의 신뢰</span>
+              <span className="text-navy-600">&apos;청소다&apos;</span>의 신뢰
             </h2>
             <p className="mt-4 text-sm text-ink/70 sm:mt-5 sm:text-lg break-keep">
               많은 고객님께서 청소다를 선택하시고, 다시 찾아주십니다. 단순히 청소만 하는

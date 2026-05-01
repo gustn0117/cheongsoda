@@ -57,21 +57,24 @@ export default function Hero() {
       <div className="container-px mx-auto max-w-7xl pt-28 pb-16 sm:pt-40 sm:pb-28 lg:pt-48 lg:pb-36">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-16 lg:items-center">
           <div className="animate-fade-up">
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#FEE500]/40 bg-[#FEE500]/10 px-3 py-1.5 text-[11px] font-bold text-[#FEE500] sm:text-xs sm:px-3.5">
-                <Bolt size={12} />
+            <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#FEE500]/40 bg-[#FEE500]/10 px-3.5 py-2 text-sm font-bold text-[#FEE500] sm:px-4 sm:text-base">
+                <Bolt size={15} />
                 온라인 플랫폼 만족도 1위
               </span>
-              <span className="chip-glow !text-[11px] sm:!text-xs">
+              <span className="chip-glow !px-3.5 !py-2 !text-sm sm:!px-4 sm:!text-base">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                지금 13명이 견적 상담중
+                지금 33명이 견적 상담중
               </span>
             </div>
 
             <h1 className="heading-display mt-6 text-[2.5rem] sm:text-6xl lg:text-7xl break-keep">
               종합청소업체 <span className="text-[#FEE500]">1위</span>
               <br />
-              청소다가 다릅니다
+              <span className="text-[3.25rem] sm:text-[5rem] lg:text-[6.5rem] text-[#7DA0FF]">
+                청소다
+              </span>
+              는 다릅니다
             </h1>
 
             <p className="mt-5 max-w-xl text-base text-white/85 sm:mt-6 sm:text-xl break-keep">
@@ -112,7 +115,7 @@ export default function Hero() {
             <div className="mt-9 grid grid-cols-3 gap-2 max-w-lg sm:mt-12 sm:gap-3">
               {[
                 { v: '50팀+', l: '전국 직영팀' },
-                { v: '4.98', l: '평균 만족도' },
+                { v: '5.0', l: '평균 만족도' },
                 { v: '5일', l: 'A/S 보장' },
               ].map((s) => (
                 <div
@@ -133,9 +136,10 @@ export default function Hero() {
                 30초 견적 신청
               </div>
               <h3 className="heading-section text-2xl text-white sm:text-3xl break-keep">
-                지금 신청하면
+                지역별 맞춤 청소 견적!
                 <br />
-                <span className="text-[#FEE500]">평당 1만원</span> 특가
+                지금 신청하면{' '}
+                <span className="text-[#FEE500]">이벤트 할인 진행중</span>
               </h3>
               <p className="mt-2 text-sm text-white/75 break-keep">
                 전국 어디든 출장비 0원 · 평일·주말 동일 가격
@@ -143,7 +147,7 @@ export default function Hero() {
 
               <ul className="mt-5 space-y-2.5 sm:mt-6 sm:space-y-3">
                 {[
-                  '베테랑 직영팀 2~4인 배정 (하청·알바 X)',
+                  '전국 베테랑 직영팀 배정 (하청·알바 X)',
                   '피톤치드·스팀 살균 전 고객 무료',
                   '리뷰 작성시 2만원 현금 페이백',
                   '대물 1억원 배상책임 보험 가입',

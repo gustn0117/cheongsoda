@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { COMPANY } from '@/app/lib/data';
 import Logo from './Logo';
-import { CloseIcon, MenuIcon, NaverBlog, Phone } from './Icons';
+import { CloseIcon, Instagram, MenuIcon, NaverBlog, Phone, Soomgo } from './Icons';
 
 const NAV = [
   { id: 'services', label: '청소 서비스' },
@@ -55,6 +55,32 @@ export default function Header() {
         </nav>
 
         <div className="hidden md:flex items-center gap-1.5">
+          <a
+            href={COMPANY.instagram}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="인스타그램"
+            className={`grid h-10 w-10 place-items-center rounded-full transition ${
+              scrolled
+                ? 'bg-gradient-to-tr from-[#FA7E1E] via-[#D62976] to-[#962FBF] text-white'
+                : 'bg-white/10 text-white hover:bg-gradient-to-tr hover:from-[#FA7E1E] hover:via-[#D62976] hover:to-[#962FBF]'
+            }`}
+          >
+            <Instagram size={16} />
+          </a>
+          <a
+            href={COMPANY.soomgo}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="숨고"
+            className={`grid h-10 w-10 place-items-center rounded-full transition ${
+              scrolled
+                ? 'bg-[#1F4FF1] text-white hover:bg-[#0E3AC8]'
+                : 'bg-white/10 text-white hover:bg-[#1F4FF1]'
+            }`}
+          >
+            <Soomgo size={16} />
+          </a>
           <a
             href={COMPANY.blog}
             target="_blank"
@@ -141,6 +167,28 @@ export default function Header() {
               <NaverBlog size={16} />
               네이버 블로그
             </a>
+            <div className="grid grid-cols-2 gap-2">
+              <a
+                href={COMPANY.instagram}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setMobileOpen(false)}
+                className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-tr from-[#FA7E1E] via-[#D62976] to-[#962FBF] px-4 py-3 text-sm font-bold text-white"
+              >
+                <Instagram size={15} />
+                인스타그램
+              </a>
+              <a
+                href={COMPANY.soomgo}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setMobileOpen(false)}
+                className="flex items-center justify-center gap-2 rounded-xl bg-[#1F4FF1] px-4 py-3 text-sm font-bold text-white"
+              >
+                <Soomgo size={15} />
+                숨고
+              </a>
+            </div>
           </div>
         </div>
       )}

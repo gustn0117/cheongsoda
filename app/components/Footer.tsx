@@ -1,6 +1,6 @@
 import { COMPANY } from '@/app/lib/data';
 import Logo from './Logo';
-import { KakaoBubble, NaverBlog, Phone } from './Icons';
+import { Instagram, KakaoBubble, NaverBlog, Phone, Soomgo } from './Icons';
 
 export default function Footer() {
   return (
@@ -40,21 +40,41 @@ export default function Footer() {
                 <NaverBlog size={14} />
                 블로그
               </a>
+              <a
+                href={COMPANY.instagram}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="인스타그램"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-tr from-[#FA7E1E] via-[#D62976] to-[#962FBF] px-4 py-2 text-sm font-bold text-white transition hover:-translate-y-0.5"
+              >
+                <Instagram size={14} />
+                인스타
+              </a>
+              <a
+                href={COMPANY.soomgo}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="숨고"
+                className="inline-flex items-center gap-2 rounded-full bg-[#1F4FF1] px-4 py-2 text-sm font-bold text-white transition hover:-translate-y-0.5"
+              >
+                <Soomgo size={14} />
+                숨고
+              </a>
             </div>
           </div>
 
           <FooterCol
             title="청소 서비스"
             items={[
-              '입주·이사 청소',
-              '거주 청소',
-              '상가·사무실 청소',
-              '에어컨 청소',
-              '욕실·주방 청소',
-              '곰팡이 제거',
-              '줄눈 시공',
-              '탄성 코팅',
+              '입주/이사청소',
+              '거주청소',
+              '리모델링후청소',
+              '상가/사무실청소',
+              '특수청소',
               '폐기물 처리',
+              '가전청소',
+              '맞춤형 공간정리',
+              '줄눈시공/탄성코팅',
             ]}
           />
           <FooterCol
@@ -91,7 +111,31 @@ export default function Footer() {
                   className="inline-flex items-center gap-1.5 text-white/90 transition hover:text-[#03C75A]"
                 >
                   <NaverBlog size={14} />
-                  {COMPANY.blogHandle}
+                  네이버블로그
+                </a>
+              </li>
+              <li>
+                <span className="block text-xs text-white/50">인스타그램</span>
+                <a
+                  href={COMPANY.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 text-white/90 transition hover:text-rose-300"
+                >
+                  <Instagram size={14} />
+                  {COMPANY.instagramHandle}
+                </a>
+              </li>
+              <li>
+                <span className="block text-xs text-white/50">숨고</span>
+                <a
+                  href={COMPANY.soomgo}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 text-white/90 transition hover:text-blue-300"
+                >
+                  <Soomgo size={14} />
+                  숨고 프로필
                 </a>
               </li>
             </ul>

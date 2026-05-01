@@ -27,26 +27,23 @@ export default function Services() {
               className="group relative block overflow-hidden rounded-2xl border border-navy-100 bg-white shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-navy-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-600 focus-visible:ring-offset-2 sm:rounded-3xl"
               style={{ animationDelay: `${i * 60}ms` }}
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
+              <div className="relative aspect-[4/3] overflow-hidden bg-navy-50">
                 <img
                   src={s.image}
                   alt={s.title}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/20 to-transparent" />
-                <span className="absolute left-3 top-3 inline-flex items-center rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-bold text-navy-700 backdrop-blur sm:left-4 sm:top-4 sm:px-3 sm:text-xs">
-                  {s.hashtag}
-                </span>
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/65 via-ink/15 to-transparent" />
                 <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4">
-                  <h3 className="text-xl font-extrabold text-white drop-shadow sm:text-2xl break-keep">
+                  <h3 className="text-xl font-extrabold text-[#7DA0FF] drop-shadow-lg sm:text-2xl break-keep">
                     {s.title}
                   </h3>
                 </div>
               </div>
               <div className="p-5 sm:p-6">
                 <p className="text-sm font-semibold text-navy-600 break-keep">{s.summary}</p>
-                <p className="mt-2.5 text-sm leading-relaxed text-ink/70 line-clamp-3 break-keep sm:mt-3">
+                <p className="mt-2.5 text-sm leading-relaxed text-ink/70 line-clamp-4 break-keep sm:mt-3">
                   {s.detail}
                 </p>
                 <div className="mt-4 flex items-center justify-between border-t border-navy-100 pt-3.5 text-sm sm:mt-5 sm:pt-4">

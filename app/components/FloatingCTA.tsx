@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { COMPANY } from '@/app/lib/data';
-import { KakaoBubble, NaverBlog, Phone } from './Icons';
+import { Instagram, KakaoBubble, NaverBlog, Phone } from './Icons';
 
 export default function FloatingCTA() {
   const [show, setShow] = useState(false);
@@ -16,24 +16,28 @@ export default function FloatingCTA() {
 
   return (
     <div
-      className={`fixed right-3 bottom-3 sm:right-6 sm:bottom-6 z-40 flex flex-col items-end gap-2.5 transition-all duration-500 ${
+      className={`fixed right-3 bottom-3 sm:right-6 sm:bottom-6 z-40 flex flex-col items-end gap-2 transition-all duration-500 ${
         show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
       }`}
     >
       <a
+        href={COMPANY.instagram}
+        target="_blank"
+        rel="noreferrer"
+        className="grid h-11 w-11 place-items-center rounded-full bg-gradient-to-tr from-[#FA7E1E] via-[#D62976] to-[#962FBF] text-white shadow-navy-lg transition hover:-translate-y-0.5 sm:h-12 sm:w-12"
+        aria-label="인스타그램"
+      >
+        <Instagram size={18} />
+      </a>
+
+      <a
         href={COMPANY.blog}
         target="_blank"
         rel="noreferrer"
-        className="group flex items-center gap-2.5 rounded-full bg-white px-3 py-2.5 shadow-navy-lg ring-1 ring-emerald-100 transition hover:-translate-y-0.5 sm:px-4 sm:py-3"
+        className="grid h-11 w-11 place-items-center rounded-full bg-[#03C75A] text-white shadow-navy-lg transition hover:-translate-y-0.5 sm:h-12 sm:w-12"
         aria-label="네이버 블로그"
       >
-        <span className="grid h-9 w-9 place-items-center rounded-full bg-[#03C75A] text-white sm:h-10 sm:w-10">
-          <NaverBlog size={16} />
-        </span>
-        <span className="hidden sm:flex flex-col leading-tight pr-1">
-          <span className="text-[11px] font-semibold text-[#03C75A]">실제 후기</span>
-          <span className="text-sm font-extrabold text-ink">네이버 블로그</span>
-        </span>
+        <NaverBlog size={18} />
       </a>
 
       <a

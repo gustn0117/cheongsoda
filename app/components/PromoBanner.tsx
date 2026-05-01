@@ -18,11 +18,12 @@ export default function PromoBanner() {
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-[#FEE500]/50 bg-[#FEE500]/10 px-3.5 py-1 text-[11px] font-extrabold text-[#FEE500] sm:text-xs">
                 <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#FEE500]" />
-                FREE EVENT · 4월 한정
+                FREE EVENT
               </div>
               <h2 className="heading-section mt-4 text-[1.65rem] sm:mt-5 sm:text-4xl lg:text-5xl break-keep">
-                지금 신청하면 <span className="text-[#FEE500]">평당 1만원</span>
-                <br />+ 리뷰 작성시{' '}
+                지금 신청하면{' '}
+                <span className="text-[#FEE500]">이벤트 할인 진행중</span>
+                <br />+ 리뷰 작성 시{' '}
                 <span className="text-[#FEE500]">2만원 현금 페이백</span>
               </h2>
               <p className="mt-4 max-w-xl text-sm text-white/80 sm:mt-5 sm:text-base break-keep">
@@ -51,7 +52,7 @@ export default function PromoBanner() {
 
             <div className="grid gap-3">
               {[
-                { v: '1만원/평', l: '4월 특가 단가', tone: 'gold' },
+                { v: '이벤트 진행중', l: '지역별 맞춤 청소 견적', tone: 'gold' },
                 { v: '2만원', l: '리뷰 작성 페이백' },
                 { v: 'FREE', l: '피톤치드·스팀 살균' },
                 { v: '5일 A/S', l: '책임 보장 기간' },

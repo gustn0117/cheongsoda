@@ -59,18 +59,18 @@ export default function Reviews() {
           <div>
             <span className="section-eyebrow">Real Reviews</span>
             <h2 className="heading-section mt-3 text-[2rem] text-ink sm:mt-4 sm:text-5xl lg:text-6xl break-keep">
-              숨고·당근·미소
+              모든 플랫폼
               <br />
               <span className="text-navy-600">만족도 리뷰 100%</span>
             </h2>
             <div className="mt-5 flex flex-wrap gap-2 sm:mt-6">
               {PLATFORM_BADGES.map((p) => (
                 <span
-                  key={p.name}
+                  key={p.label}
                   className="inline-flex items-center gap-1.5 rounded-full border border-navy-100 bg-white px-3 py-1.5 text-[11px] font-bold text-navy-700 sm:gap-2 sm:px-3.5 sm:text-xs"
                 >
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                  {p.name} · {p.label}
+                  <span aria-hidden className="text-rose-500">♥</span>
+                  {p.label}
                 </span>
               ))}
             </div>
@@ -80,7 +80,7 @@ export default function Reviews() {
               <div className="flex flex-col">
                 <span className="text-[11px] font-semibold text-ink/60 sm:text-xs">평균 평점</span>
                 <span className="number-tabular text-xl font-black text-ink sm:text-2xl">
-                  4.98 / 5.0
+                  5.0 / 5.0
                 </span>
               </div>
               <StarRow rating={5} />
@@ -113,30 +113,13 @@ export default function Reviews() {
               key={i}
               className="group relative w-[85%] shrink-0 snap-start overflow-hidden rounded-2xl border border-navy-100 bg-white shadow-soft transition hover:shadow-navy-lg sm:w-[58%] sm:rounded-3xl lg:w-[40%]"
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <img
-                  src={r.image}
-                  alt={`${r.name} 후기`}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent" />
-                <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-bold text-navy-700 sm:left-4 sm:top-4 sm:px-3 sm:text-xs">
-                  {r.service}
-                </span>
-              </div>
-              <div className="p-5 sm:p-6">
-                <div className="flex items-center justify-between gap-3">
-                  <div className="min-w-0">
-                    <p className="text-base font-extrabold text-ink truncate">{r.name}</p>
-                    <p className="mt-0.5 text-xs text-ink/55 number-tabular">{r.date}</p>
-                  </div>
-                  <StarRow rating={r.rating} />
-                </div>
-                <p className="mt-3 text-sm leading-relaxed text-ink/80 line-clamp-4 break-keep sm:mt-4">
-                  &ldquo;{r.text}&rdquo;
-                </p>
-              </div>
+              <img
+                src={r.image}
+                alt={r.alt}
+                loading="lazy"
+                className="block w-full select-none transition-transform duration-700 group-hover:scale-[1.02]"
+                draggable={false}
+              />
             </article>
           ))}
         </div>
@@ -157,7 +140,7 @@ export default function Reviews() {
         <div className="mt-10 grid grid-cols-3 gap-3 rounded-2xl border border-navy-100 bg-white p-5 shadow-soft sm:mt-14 sm:gap-4 sm:rounded-3xl sm:p-8">
           {[
             { v: '5.0', l: '상위 1% 평점 유지' },
-            { v: '98%', l: '재의뢰·추천 비율' },
+            { v: '100%', l: '재의뢰·추천 비율' },
             { v: '2만원', l: '리뷰 작성 페이백' },
           ].map((s) => (
             <div key={s.l} className="text-center sm:text-left">

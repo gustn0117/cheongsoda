@@ -176,6 +176,31 @@ export function CloseIcon(props: IconProps) {
   );
 }
 
+export function Instagram(props: IconProps) {
+  return (
+    <svg {...base({ ...props, strokeWidth: props.strokeWidth ?? 2 })}>
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.5" y2="6.5" strokeWidth="2.5" />
+    </svg>
+  );
+}
+
+export function Soomgo(props: IconProps) {
+  return (
+    <svg
+      width={props.size ?? 18}
+      height={props.size ?? 18}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={props.className}
+      aria-hidden
+    >
+      <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 4.5a3 3 0 1 1-3 3 3 3 0 0 1 3-3zm0 13.5a7 7 0 0 1-5.79-3.07c.05-1.94 3.86-3 5.79-3s5.74 1.06 5.79 3A7 7 0 0 1 12 20z" />
+    </svg>
+  );
+}
+
 export function NaverBlog(props: IconProps) {
   return (
     <svg
