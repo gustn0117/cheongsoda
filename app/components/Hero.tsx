@@ -68,7 +68,11 @@ export default function Hero() {
               </span>
             </div>
 
-            <h1 className="heading-display mt-6 text-[2.5rem] sm:text-6xl lg:text-7xl break-keep">
+            <p className="mt-5 text-base font-bold tracking-[0.04em] text-[#7DA0FF] sm:mt-6 sm:text-lg break-keep">
+              입주 · 이사 · 거주 · 상가청소 전문
+            </p>
+
+            <h1 className="heading-display mt-2 text-[2.5rem] sm:text-6xl lg:text-7xl break-keep">
               종합청소업체 <span className="text-[#FEE500]">1위</span>
               <br />
               <span className="text-[3.25rem] sm:text-[5rem] lg:text-[6.5rem] text-[#7DA0FF]">
@@ -78,12 +82,10 @@ export default function Hero() {
             </h1>
 
             <p className="mt-5 max-w-xl text-base text-white/85 sm:mt-6 sm:text-xl break-keep">
-              입주 · 이사 · 거주 · 상가청소 전문.
-              <br className="hidden sm:block" />
-              <span className="block sm:inline">
-                하청·알바 없는 <span className="font-bold text-white">직영팀 50팀</span> 운영,
-              </span>{' '}
-              피톤치드·스팀살균 <span className="font-bold text-white">전 고객 무료</span>.
+              하청·알바 없는 <span className="font-bold text-white">직영팀 50팀</span> 운영
+              <br />
+              보이지 않는 곳까지 완벽하게,{' '}
+              <span className="font-bold text-white">결과로 증명합니다.</span>
             </p>
 
             <div className="mt-7 flex flex-wrap items-center gap-2.5 sm:mt-9 sm:gap-3">
@@ -112,18 +114,19 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="mt-9 grid grid-cols-3 gap-2 max-w-lg sm:mt-12 sm:gap-3">
+            <div className="mt-9 grid grid-cols-2 gap-2 max-w-lg sm:mt-12 sm:grid-cols-4 sm:gap-3">
               {[
-                { v: '50팀+', l: '전국 직영팀' },
-                { v: '5.0', l: '평균 만족도' },
-                { v: '5일', l: 'A/S 보장' },
+                { v: '50팀+', l: '전국 직영팀 운영' },
+                { v: '5.0', l: '고객 만족도' },
+                { v: '5일', l: 'A/S 보장 서비스' },
+                { v: '10,000+', l: '누적 고객 수' },
               ].map((s) => (
                 <div
                   key={s.l}
                   className="rounded-2xl border border-white/15 bg-white/5 px-3 py-3 backdrop-blur sm:px-4"
                 >
-                  <div className="number-tabular text-lg font-extrabold text-white sm:text-2xl">{s.v}</div>
-                  <div className="mt-0.5 text-[11px] font-medium text-white/70 sm:text-xs">{s.l}</div>
+                  <div className="number-tabular text-lg font-extrabold text-white sm:text-xl">{s.v}</div>
+                  <div className="mt-0.5 text-[11px] font-medium text-white/70 sm:text-xs break-keep">{s.l}</div>
                 </div>
               ))}
             </div>

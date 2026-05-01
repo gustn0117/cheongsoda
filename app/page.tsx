@@ -14,6 +14,7 @@ import Services from './components/Services';
 import Showcase from './components/Showcase';
 import Stats from './components/Stats';
 import TrustBar from './components/TrustBar';
+import TrustStrip from './components/TrustStrip';
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <main>
         <Hero />
         <TrustBar />
+        <TrustStrip />
         <Stats />
         <Services />
         <Process />

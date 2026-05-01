@@ -62,8 +62,8 @@ export const SERVICES: Service[] = [
   },
   {
     slug: 'special',
-    title: '특수청소',
-    summary: '고독사 · 화재청소 등 특수 현장',
+    title: '특수청소(고독사·화재청소)',
+    summary: '일반 청소로 어려운 특수 현장',
     detail:
       '고독사 현장, 쓰레기집, 장기간 방치 공간 등 일반 청소로 해결하기 어려운 현장을 전문 장비와 체계적인 작업으로 정리·복구하는 서비스입니다. 악취 제거, 폐기물 처리, 위생 관리까지 진행하여 안전하고 쾌적한 공간으로 회복해드립니다.',
     image: '/services/v2-special.png',
