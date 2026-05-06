@@ -24,8 +24,9 @@ export default function Process() {
             </h2>
           </div>
           <p className="max-w-md text-sm text-white/75 sm:text-base break-keep">
-            번거로운 견적 절차 없이, 카톡 한번이면 시작됩니다. 청소 당일까지 모든 단계를
-            본사 팀장이 직접 안내해 드립니다.
+            번거로운 견적 절차 없이, 카톡 한번이면 시작됩니다.
+            <br />
+            청소 당일까지 모든 단계를 본사 팀장님이 직접 안내해 드립니다.
           </p>
         </div>
 

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { COMPANY } from '@/app/lib/data';
-import { Instagram, KakaoBubble, NaverBlog, Phone } from './Icons';
+import { Instagram, KakaoBubble, NaverBlog, Phone, Soomgo, YouTube } from './Icons';
 
 export default function FloatingCTA() {
   const [show, setShow] = useState(false);
@@ -20,6 +20,26 @@ export default function FloatingCTA() {
         show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
       }`}
     >
+      <a
+        href={COMPANY.soomgo}
+        target="_blank"
+        rel="noreferrer"
+        className="grid h-11 w-11 place-items-center rounded-full bg-[#1F4FF1] text-white shadow-navy-lg transition hover:-translate-y-0.5 sm:h-12 sm:w-12"
+        aria-label="숨고"
+      >
+        <Soomgo size={18} />
+      </a>
+
+      <a
+        href={COMPANY.youtube}
+        target="_blank"
+        rel="noreferrer"
+        className="grid h-11 w-11 place-items-center rounded-full bg-[#FF0000] text-white shadow-navy-lg transition hover:-translate-y-0.5 sm:h-12 sm:w-12"
+        aria-label="유튜브"
+      >
+        <YouTube size={20} />
+      </a>
+
       <a
         href={COMPANY.instagram}
         target="_blank"

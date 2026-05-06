@@ -142,9 +142,9 @@ export default function Hero() {
               <h3 className="heading-section text-2xl text-white sm:text-3xl break-keep">
                 지역별 맞춤 청소견적!
                 <br />
-                지금 신청하면 <span className="text-[#FEE500]">평당 가격</span>
+                지금 신청하면 <span className="text-[#7DA0FF]">평당 가격</span>
                 <br />
-                <span className="text-[#FEE500]">이벤트할인 진행중</span>
+                <span className="text-[#FEE500]">이벤트 진행중</span>
               </h3>
               <p className="mt-2 text-sm text-white/75 break-keep">
                 전국 어디든 출장비 0원 · 평일·주말 동일 가격

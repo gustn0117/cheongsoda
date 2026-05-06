@@ -18,11 +18,15 @@ export default function Promises() {
         <div className="mx-auto max-w-3xl text-center">
           <span className="section-eyebrow">Our Promise</span>
           <h2 className="heading-section mt-3 text-[2rem] text-ink sm:mt-4 sm:text-5xl lg:text-6xl break-keep">
-            청소다가 <span className="text-navy-600">고객님과 약속</span>합니다
+            <span className="text-navy-600">&apos;청소다&apos;</span>가{' '}
+            <span className="text-[#FF8A3D]">고객님과의 약속</span>
           </h2>
           <p className="mt-4 text-sm text-ink/70 sm:mt-6 sm:text-lg break-keep">
-            30대 청년들이 운영하는 청소다는 7년간의 청소팀장 경력과 노하우로, 보이지 않는 곳까지
-            내 집처럼 청소합니다. 만족하실 때까지 끝까지 책임집니다.
+            30대 청년들이 운영하는 청소다는
+            <br />
+            7년간의 청소팀장 경력과 노하우로,
+            <br />
+            끝까지 책임지겠습니다.
           </p>
         </div>
 
