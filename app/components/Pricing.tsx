@@ -8,12 +8,12 @@ const PYEONG = [10, 15, 20, 25, 30, 35, 40, 50];
 
 type AddOn = { key: string; label: string; included: boolean };
 const DEFAULT_ADDONS: AddOn[] = [
-  { key: 'aircon', label: '에어컨 청소', included: false },
   { key: 'mold', label: '곰팡이 제거', included: false },
-  { key: 'hood', label: '후드·환풍기 청소', included: false },
-  { key: 'fridge', label: '냉장고 청소', included: false },
-  { key: 'window', label: '창문·창틀 정밀', included: false },
-  { key: 'storage', label: '수납장 탈거 청소', included: false },
+  { key: 'pet', label: '반려동물 털 제거', included: false },
+  { key: 'stain', label: '얼룩·페인트 등 흔적 제거', included: false },
+  { key: 'sbs', label: '새집증후군 제거', included: false },
+  { key: 'window', label: '외부 유리창 청소', included: false },
+  { key: 'appliance', label: '가전제품 청소', included: false },
 ];
 
 export default function Pricing() {
@@ -139,7 +139,7 @@ export default function Pricing() {
             </div>
 
             <a href="#contact" className="btn-primary mt-6 w-full sm:mt-7">
-              이 견적으로 카톡 상담
+              이 견적으로 상담 요청하기
               <ArrowRight size={16} />
             </a>
           </div>

@@ -103,7 +103,7 @@ export default function QuoteForm() {
                 className="btn-kakao !px-5 !py-3.5 text-sm sm:!px-7 sm:!py-4 sm:text-base"
               >
                 <KakaoBubble size={16} />
-                카카오 채널 바로가기
+                카톡 상담하기
               </a>
               <a
                 href={`tel:${COMPANY.phoneTel}`}

@@ -13,6 +13,7 @@ export default function Showcase() {
           </div>
           <p className="max-w-md text-sm text-ink/65 sm:text-base break-keep">
             매 현장마다 사진과 영상을 남겨 고객님께 투명하게 공유합니다.
+            <br className="hidden sm:block" />
             마감의 차이를 직접 확인해 보세요.
           </p>
         </div>

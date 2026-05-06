@@ -82,7 +82,8 @@ export default function Hero() {
             </h1>
 
             <p className="mt-5 max-w-xl text-base text-white/85 sm:mt-6 sm:text-xl break-keep">
-              하청·알바 없는 <span className="font-bold text-white">직영팀 50팀</span> 운영
+              하청·알바 없는{' '}
+              <span className="font-bold text-white">전국 직영팀 50팀+</span> 운영
               <br />
               보이지 않는 곳까지 완벽하게,{' '}
               <span className="font-bold text-white">결과로 증명합니다.</span>
@@ -141,8 +142,11 @@ export default function Hero() {
               <h3 className="heading-section text-2xl text-white sm:text-3xl break-keep">
                 지역별 맞춤 청소 견적!
                 <br />
-                지금 신청하면{' '}
-                <span className="text-[#FEE500]">이벤트 할인 진행중</span>
+                지금 신청하면
+                <br />
+                <span className="text-[#FEE500]">평당 가격</span> 이벤트
+                <br />
+                할인 진행중
               </h3>
               <p className="mt-2 text-sm text-white/75 break-keep">
                 전국 어디든 출장비 0원 · 평일·주말 동일 가격

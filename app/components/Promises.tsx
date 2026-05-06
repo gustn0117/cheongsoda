@@ -26,6 +26,30 @@ export default function Promises() {
           </p>
         </div>
 
+        <div className="mx-auto mt-10 max-w-4xl sm:mt-12">
+          <div className="relative overflow-hidden rounded-3xl border border-navy-100 bg-white shadow-soft sm:rounded-[32px]">
+            <img
+              src="/team/group-shot.png"
+              alt="청소다 직영팀 단체샷"
+              loading="lazy"
+              className="block h-auto w-full"
+            />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent p-5 sm:p-6">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="rounded-full bg-[#FEE500] px-2.5 py-1 text-[10px] font-extrabold text-[#3C1E1E] sm:text-xs">
+                  본사 직영팀
+                </span>
+                <span className="rounded-full bg-white/90 px-2.5 py-1 text-[10px] font-bold text-navy-700 sm:text-xs">
+                  20~40대 베테랑 50팀+
+                </span>
+              </div>
+              <p className="mt-2 text-base font-extrabold text-white drop-shadow sm:text-xl break-keep">
+                하청·알바 없이 청소다 본사에서 직접 운영하는 직영팀입니다.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-5 lg:grid-cols-[1.2fr_1fr] lg:items-start">
           {/* Promise list */}
           <div className="grid gap-3.5 sm:gap-4 sm:grid-cols-2">

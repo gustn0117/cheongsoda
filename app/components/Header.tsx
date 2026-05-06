@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { COMPANY } from '@/app/lib/data';
 import Logo from './Logo';
-import { CloseIcon, Instagram, MenuIcon, NaverBlog, Phone, Soomgo } from './Icons';
+import { CloseIcon, Instagram, MenuIcon, NaverBlog, Phone, Soomgo, YouTube } from './Icons';
 
 const NAV = [
   { id: 'services', label: '청소 서비스' },
@@ -55,6 +55,19 @@ export default function Header() {
         </nav>
 
         <div className="hidden md:flex items-center gap-1.5">
+          <a
+            href={COMPANY.youtube}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="유튜브"
+            className={`grid h-10 w-10 place-items-center rounded-full transition ${
+              scrolled
+                ? 'bg-[#FF0000] text-white hover:bg-[#CC0000]'
+                : 'bg-white/10 text-white hover:bg-[#FF0000]'
+            }`}
+          >
+            <YouTube size={18} />
+          </a>
           <a
             href={COMPANY.instagram}
             target="_blank"
@@ -179,14 +192,24 @@ export default function Header() {
                 인스타그램
               </a>
               <a
+                href={COMPANY.youtube}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setMobileOpen(false)}
+                className="flex items-center justify-center gap-2 rounded-xl bg-[#FF0000] px-4 py-3 text-sm font-bold text-white"
+              >
+                <YouTube size={16} />
+                유튜브
+              </a>
+              <a
                 href={COMPANY.soomgo}
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => setMobileOpen(false)}
-                className="flex items-center justify-center gap-2 rounded-xl bg-[#1F4FF1] px-4 py-3 text-sm font-bold text-white"
+                className="col-span-2 flex items-center justify-center gap-2 rounded-xl bg-[#1F4FF1] px-4 py-3 text-sm font-bold text-white"
               >
                 <Soomgo size={15} />
-                숨고
+                숨고 프로필
               </a>
             </div>
           </div>

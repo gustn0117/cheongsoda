@@ -21,7 +21,8 @@ export default function PromoBanner() {
                 FREE EVENT
               </div>
               <h2 className="heading-section mt-4 text-[1.65rem] sm:mt-5 sm:text-4xl lg:text-5xl break-keep">
-                지금 신청하면{' '}
+                지금 신청하면 <span className="text-[#FEE500]">평당 가격</span>
+                <br />
                 <span className="text-[#FEE500]">이벤트 할인 진행중</span>
                 <br />+ 리뷰 작성 시{' '}
                 <span className="text-[#FEE500]">2만원 현금 페이백</span>

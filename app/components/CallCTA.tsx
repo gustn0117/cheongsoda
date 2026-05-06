@@ -7,6 +7,7 @@ import {
   NaverBlog,
   Phone,
   Soomgo,
+  YouTube,
 } from './Icons';
 
 export default function CallCTA() {
@@ -181,12 +182,51 @@ export default function CallCTA() {
             </div>
           </a>
 
+          {/* 유튜브 카드 */}
+          <a
+            href={COMPANY.youtube}
+            target="_blank"
+            rel="noreferrer"
+            className="group relative overflow-hidden rounded-[28px] border border-red-200 bg-gradient-to-br from-[#FF3030] via-[#FF0000] to-[#CC0000] p-7 text-white transition hover:-translate-y-1 hover:shadow-navy-lg sm:p-8"
+          >
+            <div
+              className="absolute inset-0 opacity-0 transition group-hover:opacity-100"
+              style={{
+                backgroundImage:
+                  'radial-gradient(50% 60% at 100% 0%, rgba(255,255,255,0.18) 0%, transparent 60%)',
+              }}
+            />
+            <div className="relative flex items-start justify-between gap-3">
+              <div className="min-w-0 flex-1">
+                <div className="inline-flex items-center gap-2 rounded-full bg-white/20 px-3 py-1 text-[11px] font-extrabold text-white tracking-wider backdrop-blur">
+                  YOUTUBE
+                </div>
+                <h3 className="mt-4 text-lg font-extrabold sm:text-xl break-keep">
+                  유튜브 채널
+                </h3>
+                <p className="mt-1.5 text-sm text-white/90 break-keep">
+                  실제 청소 과정 영상을 공개합니다
+                </p>
+                <div className="mt-5 text-base font-black sm:text-lg break-keep">
+                  영상으로 보는 청소다
+                </div>
+              </div>
+              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-white/15 text-white backdrop-blur transition group-hover:scale-110 sm:h-12 sm:w-12">
+                <YouTube size={24} />
+              </span>
+            </div>
+            <div className="relative mt-6 inline-flex items-center gap-1.5 text-sm font-bold">
+              유튜브 바로가기
+              <ExternalLink size={14} />
+            </div>
+          </a>
+
           {/* 숨고 카드 */}
           <a
             href={COMPANY.soomgo}
             target="_blank"
             rel="noreferrer"
-            className="group relative overflow-hidden rounded-[28px] border border-navy-100 bg-gradient-to-br from-[#1F4FF1] via-[#2D5BFF] to-[#0E3AC8] p-7 text-white transition hover:-translate-y-1 hover:shadow-navy-lg sm:col-span-2 sm:p-8 lg:col-span-1"
+            className="group relative overflow-hidden rounded-[28px] border border-navy-100 bg-gradient-to-br from-[#1F4FF1] via-[#2D5BFF] to-[#0E3AC8] p-7 text-white transition hover:-translate-y-1 hover:shadow-navy-lg sm:p-8"
           >
             <div
               className="absolute inset-0 opacity-0 transition group-hover:opacity-100"

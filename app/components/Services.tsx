@@ -12,9 +12,11 @@ export default function Services() {
             구석구석, <span className="text-navy-600">청소 + 시공</span>까지
           </h2>
           <p className="mt-4 text-sm text-ink/70 sm:mt-6 sm:text-lg break-keep">
-            입주·이사·거주·상가청소부터 줄눈시공·탄성코팅·폐기물처리까지.
+            입주·이사·거주·상가청소부터 줄눈시공·탄성코팅·폐기물처리까지
             <br className="hidden sm:block" />
-            한 번에 끝내는 종합청소 서비스를 제공합니다.
+            한 번에 종합청소업체{' '}
+            <span className="font-bold text-navy-700">&apos;청소다&apos;</span>
+            에서 완벽하게 케어해드리겠습니다.
           </p>
         </div>
 
@@ -24,7 +26,7 @@ export default function Services() {
               key={s.slug}
               href="#contact"
               aria-label={`${s.title} 문의하기`}
-              className="group relative block overflow-hidden rounded-2xl border border-navy-100 bg-white shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-navy-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-600 focus-visible:ring-offset-2 sm:rounded-3xl"
+              className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-navy-100 bg-white shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-navy-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-600 focus-visible:ring-offset-2 sm:rounded-3xl"
               style={{ animationDelay: `${i * 60}ms` }}
             >
               <div className="relative aspect-[4/3] overflow-hidden bg-navy-50">
@@ -41,9 +43,9 @@ export default function Services() {
                   </h3>
                 </div>
               </div>
-              <div className="p-5 sm:p-6">
+              <div className="flex flex-1 flex-col p-5 sm:p-6">
                 <p className="text-sm font-semibold text-navy-600 break-keep">{s.summary}</p>
-                <p className="mt-2.5 text-sm leading-relaxed text-ink/70 line-clamp-4 break-keep sm:mt-3">
+                <p className="mt-2.5 flex-1 text-sm leading-relaxed text-ink/70 break-keep sm:mt-3">
                   {s.detail}
                 </p>
                 <div className="mt-4 flex items-center justify-between border-t border-navy-100 pt-3.5 text-sm sm:mt-5 sm:pt-4">

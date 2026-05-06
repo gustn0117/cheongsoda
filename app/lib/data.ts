@@ -12,6 +12,8 @@ export const COMPANY = {
   instagramHandle: '@cheongso_da',
   soomgo: 'https://soomgo.com/profile/users/12040020',
   soomgoHandle: 'soomgo.com/cheongsoda',
+  youtube: 'https://www.youtube.com/@cheongsoda',
+  youtubeHandle: '@cheongsoda',
   serviceArea: '서울 · 경기 · 인천 · 전국 직영팀 보유',
   hours: '연중무휴 · 오전 9시 ~ 오후 9시',
   ceo: '청소다 본사',
@@ -33,7 +35,7 @@ export const SERVICES: Service[] = [
     title: '입주/이사청소',
     summary: '입주 전·이사 후 빈 집 정밀 청소',
     detail:
-      '새로 입주하시기 전, 집 안 곳곳에 남아있는 공사 먼지·오염물질·생활 흔적을 깨끗하게 제거하는 전문 청소 서비스입니다. 바닥, 창틀, 주방, 화장실, 베란다 등 보이지 않는 구석까지 꼼꼼하게 청소하여 쾌적하고 안심되는 새집 환경을 만들어드립니다.',
+      '새로 입주하시기 전 집안 곳곳에 남아있는 공사 먼지·오염물질·생활 흔적을 깨끗하게 제거하는 전문 청소 서비스입니다.',
     image: '/services/v2-move-in.png',
   },
   {
@@ -41,7 +43,7 @@ export const SERVICES: Service[] = [
     title: '거주청소',
     summary: '생활 중인 공간의 정기·일반 청소',
     detail:
-      '짐이 있는 상태에서 생활하며 쌓인 먼지와 찌든 때를 깨끗하게 제거하는 전문 청소 서비스입니다. 주방·화장실·바닥·창틀까지 꼼꼼하게 관리해 쾌적한 생활공간을 만들어드립니다.',
+      '짐이 있는 상태에서 생활하며 쌓인 먼지와 찌든 때를 깨끗하게 제거하는 전문 청소 서비스입니다.',
     image: '/services/v2-live.png',
   },
   {
@@ -49,7 +51,7 @@ export const SERVICES: Service[] = [
     title: '리모델링후청소',
     summary: '인테리어 공사 후 분진·자국 제거',
     detail:
-      '인테리어 공사 후 남은 먼지, 분진, 본드 자국 등을 깨끗하게 제거하는 전문 청소 서비스입니다. 바닥·창틀·주방·욕실 등 공간 전체를 꼼꼼하게 정리해 바로 생활 가능한 깨끗한 환경을 만들어드립니다.',
+      '인테리어 공사 후 남은 먼지·분진·본드 자국 등을 깨끗하게 제거하는 전문 청소서비스입니다.',
     image: '/services/v2-remodel.png',
   },
   {
@@ -57,7 +59,7 @@ export const SERVICES: Service[] = [
     title: '상가/사무실청소',
     summary: '오픈 전·후 매장과 사무실 정밀 청소',
     detail:
-      '매장·사무실·상업공간에 쌓인 먼지와 오염을 정리하여 고객과 직원 모두가 쾌적하게 이용할 수 있는 깨끗한 환경으로 완성해드립니다.',
+      '매장·사무실·상업공간에 쌓인 먼지와 오염을 깨끗하게 제거하는 전문 청소서비스입니다.',
     image: '/services/v2-shop.png',
   },
   {
@@ -65,7 +67,7 @@ export const SERVICES: Service[] = [
     title: '특수청소(고독사·화재청소)',
     summary: '일반 청소로 어려운 특수 현장',
     detail:
-      '고독사 현장, 쓰레기집, 장기간 방치 공간 등 일반 청소로 해결하기 어려운 현장을 전문 장비와 체계적인 작업으로 정리·복구하는 서비스입니다. 악취 제거, 폐기물 처리, 위생 관리까지 진행하여 안전하고 쾌적한 공간으로 회복해드립니다.',
+      '고독사 현장·쓰레기집·장기간 방치 공간 등 일반 청소로 해결하기 어려운 현장을 전문 장비와 체계적인 작업으로 정리·복구하는 서비스입니다.',
     image: '/services/v2-special.png',
   },
   {
@@ -73,7 +75,7 @@ export const SERVICES: Service[] = [
     title: '각종 생활쓰레기 및 폐기물 처리',
     summary: '생활·대형 폐기물 수거 정리',
     detail:
-      '생활폐기물, 대형폐기물, 방치된 잡동사니 등 각종 불필요한 물품을 신속하고 체계적으로 수거·정리하는 서비스입니다. 공간 정돈부터 분리 배출, 깔끔한 마무리까지 진행하여 쾌적한 환경으로 만들어드립니다.',
+      '생활폐기물·대형폐기물·방치된 잡동사니 등 각종 불필요한 물품을 신속하고 체계적으로 수거·정리하는 서비스입니다.',
     image: '/services/v2-waste.png',
   },
   {
@@ -81,7 +83,7 @@ export const SERVICES: Service[] = [
     title: '가전청소',
     summary: '에어컨·세탁기·냉장고·건조기 청소',
     detail:
-      '에어컨을 비롯한 세탁기, 냉장고, 건조기 등 생활 가전 내부와 외부에 쌓인 먼지·곰팡이·오염물을 꼼꼼하게 관리하는 전문 청소 서비스입니다. 쾌적한 사용 환경을 유지하고 제품 성능 향상과 위생 관리에 도움을 드립니다.',
+      '에어컨을 비롯한 세탁기·냉장고·건조기 등 생활 가전 내부와 외부에 쌓인 먼지·곰팡이·오염물을 꼼꼼하게 제거하는 전문 청소서비스입니다.',
     image: '/services/v2-appliance.png',
   },
   {
@@ -89,7 +91,7 @@ export const SERVICES: Service[] = [
     title: '맞춤형 공간정리',
     summary: '옷장·팬트리·주방·창고 정리',
     detail:
-      '옷장, 팬트리, 주방, 창고 등 생활 공간을 효율적인 동선에 맞춰 체계적으로 정리하는 서비스입니다. 물건 분류부터 공간 활용, 깔끔한 배치까지 진행하여 넓고 쾌적한 생활환경으로 만들어드립니다.',
+      '옷장·팬트리·주방·창고 등 생활 공간을 효율적인 동선에 맞춰 깔끔하게 배치하고 체계적으로 정리하는 서비스입니다.',
     image: '/services/v2-organize.png',
   },
   {
@@ -97,7 +99,7 @@ export const SERVICES: Service[] = [
     title: '줄눈시공/탄성코팅',
     summary: '욕실·주방·베란다 줄눈 + 코팅',
     detail:
-      '욕실·주방·베란다 등 공간의 타일 줄눈과 벽면을 전문 시공하여 오염, 곰팡이, 결로 발생을 줄이고 깔끔하고 쾌적한 환경으로 완성해드립니다.',
+      '욕실·주방·베란다 등 공간의 타일 줄눈과 벽면을 시공·코팅하여 오염·곰팡이·결로 발생을 줄여드리는 전문 서비스입니다.',
     image: '/services/v2-grout-coating.png',
   },
 ];
@@ -106,17 +108,17 @@ export const PROCESS_STEPS = [
   {
     step: '01',
     title: '카카오톡 · 전화 상담 접수',
-    desc: '카카오톡 채널 또는 전화 상담을 통해 1:1 빠른 상담이 진행됩니다.',
+    desc: '카카오톡 또는 전화 상담을 1:1로 빠른 상담이 진행됩니다.',
   },
   {
     step: '02',
     title: '방문 일정 확정 및 사전 안내',
-    desc: '고객님의 일정과 현장 상황을 확인하고, 청소 전 준비사항을 친절하게 안내해드립니다.',
+    desc: '번거로운 견적 절차 없이, 카톡 한번이면 시작됩니다. 청소 당일까지 모든 단계를 본사 팀장이 직접 안내해 드립니다.',
   },
   {
     step: '03',
     title: '전문진 청소 진행',
-    desc: '경험 많은 전문진과 2~4인 팀의 베테랑이 체계적으로 청소를 진행하며, 모든 영역에 책임감 있는 작업을 보장합니다.',
+    desc: '경험 많은 베테랑 직영팀이 체계적으로 청소를 진행하며, 모든 영역에 책임감 있는 작업을 보장합니다.',
   },
   {
     step: '04',
@@ -161,11 +163,11 @@ export const REVIEWS = Array.from({ length: 10 }, (_, i) => ({
 export const FAQS = [
   {
     q: '청소 견적은 어떻게 산정되나요?',
-    a: '평수와 옵션(에어컨 대수, 곰팡이·후드 추가 등)에 따라 산정됩니다. 카카오톡으로 평수와 사진을 보내주시면 정확한 견적을 무료로 안내드립니다. 평일·주말 비용 동일, 전국 어디든 출장비 없음입니다.',
+    a: '평수와 옵션(에어컨 대수, 곰팡이·후드 추가 등)에 따라 산정됩니다. 카카오톡으로 평수와 사진을 보내주시면 정확한 견적을 무료로 안내드립니다. 평일·주말 비용 동일, 전국 어디든 출장비가 없습니다.',
   },
   {
     q: '피톤치드·스팀살균은 정말 무료인가요?',
-    a: '네, 청소다에 의뢰해 주신 모든 고객님께 피톤치드 살균과 고온 스팀 살균을 추가 비용 없이 기본 서비스로 제공합니다. 새집증후군 제거와 해충 예방까지 한 번에 잡아 드립니다.',
+    a: '네, 청소다에 의뢰해 주신 모든 고객님께 피톤치드 살균과 고온 스팀 살균을 추가 비용 없이 기본 서비스로 제공합니다.',
   },
   {
     q: '청소 후 부족한 부분은 어떻게 처리되나요?',
@@ -203,12 +205,12 @@ export const STATS = [
 export const REGIONS = [
   '서울/경기',
   '인천',
-  '충남/충북/세종',
+  '충남/충북/세종/대전',
   '경남/경북',
   '전남/전북',
   '강원',
   '제주',
-  '부산/울산',
+  '부산/울산/대구',
 ];
 
 export const PYEONG_OPTIONS = [
@@ -242,12 +244,16 @@ export const PLATFORM_BADGES = [
 export const PORTFOLIO_TILES: { src: string; label: string }[] = [
   { src: '/portfolio/aircon.jpg', label: '에어컨 청소' },
   { src: '/portfolio/bathroom.jpg', label: '욕실 청소' },
-  { src: '/portfolio/kitchen.jpg', label: '주방 청소' },
-  { src: '/portfolio/hood.jpg', label: '후드·환풍기 청소' },
+  { src: '/portfolio/kitchen-v2.png', label: '주방 청소' },
+  { src: '/portfolio/cabinet.png', label: '상·하부장 청소' },
+  { src: '/portfolio/kitchen.jpg', label: '걸레받이 청소' },
+  { src: '/portfolio/stove.jpg', label: '가스레인지 청소' },
+  { src: '/portfolio/hood-only.jpg', label: '후드 청소' },
+  { src: '/portfolio/hood.jpg', label: '환풍기 청소' },
   { src: '/portfolio/floor.jpg', label: '바닥 청소' },
   { src: '/portfolio/window.jpg', label: '창문·창틀 청소' },
   { src: '/portfolio/glass.png', label: '유리창 청소' },
-  { src: '/portfolio/storage.jpg', label: '수납장 청소' },
+  { src: '/portfolio/storage-v2.png', label: '수납장 청소' },
   { src: '/portfolio/mold.jpg', label: '곰팡이 제거' },
   { src: '/portfolio/fridge.jpg', label: '냉장고 청소' },
   { src: '/portfolio/drain.png', label: '하수구 청소' },

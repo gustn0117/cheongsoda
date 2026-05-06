@@ -1,6 +1,6 @@
 import { COMPANY } from '@/app/lib/data';
 import Logo from './Logo';
-import { Instagram, KakaoBubble, NaverBlog, Phone, Soomgo } from './Icons';
+import { Instagram, KakaoBubble, NaverBlog, Phone, Soomgo, YouTube } from './Icons';
 
 export default function Footer() {
   return (
@@ -59,6 +59,16 @@ export default function Footer() {
               >
                 <Soomgo size={14} />
                 숨고
+              </a>
+              <a
+                href={COMPANY.youtube}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="유튜브"
+                className="inline-flex items-center gap-2 rounded-full bg-[#FF0000] px-4 py-2 text-sm font-bold text-white transition hover:-translate-y-0.5"
+              >
+                <YouTube size={14} />
+                유튜브
               </a>
             </div>
           </div>
@@ -136,6 +146,18 @@ export default function Footer() {
                 >
                   <Soomgo size={14} />
                   숨고 프로필
+                </a>
+              </li>
+              <li>
+                <span className="block text-xs text-white/50">유튜브</span>
+                <a
+                  href={COMPANY.youtube}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 text-white/90 transition hover:text-red-300"
+                >
+                  <YouTube size={14} />
+                  {COMPANY.youtubeHandle}
                 </a>
               </li>
             </ul>

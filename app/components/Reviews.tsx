@@ -61,7 +61,7 @@ export default function Reviews() {
             <h2 className="heading-section mt-3 text-[2rem] text-ink sm:mt-4 sm:text-5xl lg:text-6xl break-keep">
               모든 플랫폼
               <br />
-              <span className="text-navy-600">만족도 리뷰 100%</span>
+              <span className="text-navy-600">만족도 100% 리뷰 5점</span>
             </h2>
             <div className="mt-5 flex flex-wrap gap-2 sm:mt-6">
               {PLATFORM_BADGES.map((p) => (
@@ -111,7 +111,7 @@ export default function Reviews() {
           {REVIEWS.map((r, i) => (
             <article
               key={i}
-              className="group relative w-[85%] shrink-0 snap-start overflow-hidden rounded-2xl border border-navy-100 bg-white shadow-soft transition hover:shadow-navy-lg sm:w-[58%] sm:rounded-3xl lg:w-[40%]"
+              className="group relative w-[92%] shrink-0 snap-start overflow-hidden rounded-2xl border border-navy-100 bg-white shadow-soft transition hover:shadow-navy-lg sm:w-[78%] sm:rounded-3xl lg:w-[58%]"
             >
               <img
                 src={r.image}
