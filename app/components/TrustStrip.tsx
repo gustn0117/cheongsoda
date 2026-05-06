@@ -12,8 +12,8 @@ export default function TrustStrip() {
     <section className="relative bg-cream py-10 sm:py-14">
       <div className="container-px mx-auto max-w-7xl">
         <div className="text-center">
-          <div className="inline-flex items-center gap-2.5 rounded-full bg-navy-50 px-5 py-2.5 text-base font-extrabold text-navy-700 sm:text-xl">
-            <span aria-hidden className="text-lg sm:text-2xl">🛡</span>
+          <div className="inline-flex items-center gap-3 rounded-full bg-navy-50 px-6 py-3 text-xl font-extrabold text-navy-700 sm:px-8 sm:py-4 sm:text-3xl">
+            <span aria-hidden className="text-2xl sm:text-4xl">🛡</span>
             안심하고 맡기세요!
           </div>
         </div>
