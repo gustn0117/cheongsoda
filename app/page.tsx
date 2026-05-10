@@ -9,6 +9,7 @@ import Process from './components/Process';
 import PromoBanner from './components/PromoBanner';
 import Promises from './components/Promises';
 import QuoteForm from './components/QuoteForm';
+import QuoteIntro from './components/QuoteIntro';
 import Reviews from './components/Reviews';
 import Services from './components/Services';
 import Showcase from './components/Showcase';
@@ -34,6 +35,7 @@ export default function Home() {
         <Pricing />
         <CallCTA />
         <FAQ />
+        <QuoteIntro />
         <QuoteForm />
       </main>
       <Footer />

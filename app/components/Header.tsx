@@ -42,22 +42,22 @@ export default function Header() {
         <a
           href="#contact"
           onClick={jumpToQuote}
-          className={`inline-flex flex-1 shrink min-w-0 items-center justify-center gap-1.5 rounded-full border px-3 py-2.5 text-[13px] font-bold transition sm:max-w-fit sm:px-4 sm:py-2 sm:text-sm lg:hidden ${
+          className={`inline-flex flex-1 min-w-0 items-center justify-center gap-1.5 rounded-full border px-3 py-2.5 text-[14px] font-bold transition sm:flex-none sm:px-3.5 sm:py-2 sm:text-sm lg:hidden ${
             scrolled
               ? 'border-navy-600 bg-navy-600 text-white hover:bg-navy-700 shadow-soft'
               : 'border-[#FEE500]/60 bg-[#FEE500]/15 text-white backdrop-blur hover:bg-[#FEE500]/25'
           }`}
         >
-          <span aria-hidden>🎁</span>
+          <span aria-hidden className="text-[15px] leading-none">🎁</span>
           <span className="truncate">청소견적 할인받기</span>
         </a>
 
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1">
           {NAV.map((item) => (
             <a
               key={item.id}
               href={`#${item.id}`}
-              className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
+              className={`whitespace-nowrap rounded-full px-2.5 py-2 text-[13px] font-semibold transition xl:px-4 xl:text-sm ${
                 scrolled
                   ? 'text-ink/80 hover:text-navy-600 hover:bg-navy-50'
                   : 'text-white/90 hover:text-white hover:bg-white/10'
@@ -68,13 +68,13 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center gap-1.5">
+        <div className="hidden lg:flex items-center gap-1.5">
           <a
             href={COMPANY.youtube}
             target="_blank"
             rel="noreferrer"
             aria-label="유튜브"
-            className={`grid h-10 w-10 place-items-center rounded-full transition ${
+            className={`hidden xl:grid h-10 w-10 place-items-center rounded-full transition ${
               scrolled
                 ? 'bg-[#FF0000] text-white hover:bg-[#CC0000]'
                 : 'bg-white/10 text-white hover:bg-[#FF0000]'
@@ -87,7 +87,7 @@ export default function Header() {
             target="_blank"
             rel="noreferrer"
             aria-label="인스타그램"
-            className={`grid h-10 w-10 place-items-center rounded-full transition ${
+            className={`hidden xl:grid h-10 w-10 place-items-center rounded-full transition ${
               scrolled
                 ? 'bg-gradient-to-tr from-[#FA7E1E] via-[#D62976] to-[#962FBF] text-white'
                 : 'bg-white/10 text-white hover:bg-gradient-to-tr hover:from-[#FA7E1E] hover:via-[#D62976] hover:to-[#962FBF]'
@@ -100,7 +100,7 @@ export default function Header() {
             target="_blank"
             rel="noreferrer"
             aria-label="숨고"
-            className={`grid h-10 w-10 place-items-center rounded-full transition ${
+            className={`hidden xl:grid h-10 w-10 place-items-center rounded-full transition ${
               scrolled
                 ? 'bg-[#1F4FF1] text-white hover:bg-[#0E3AC8]'
                 : 'bg-white/10 text-white hover:bg-[#1F4FF1]'
@@ -113,7 +113,7 @@ export default function Header() {
             target="_blank"
             rel="noreferrer"
             aria-label="네이버 블로그"
-            className={`grid h-10 w-10 place-items-center rounded-full transition ${
+            className={`hidden xl:grid h-10 w-10 place-items-center rounded-full transition ${
               scrolled
                 ? 'bg-[#03C75A] text-white hover:bg-[#02A14A]'
                 : 'bg-white/10 text-white hover:bg-[#03C75A]'
@@ -123,7 +123,7 @@ export default function Header() {
           </a>
           <a
             href={`tel:${COMPANY.phoneTel}`}
-            className={`inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-semibold number-tabular transition ${
+            className={`inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-2 text-[13px] font-semibold number-tabular transition xl:px-4 xl:text-sm ${
               scrolled
                 ? 'text-navy-700 hover:bg-navy-50'
                 : 'text-white hover:bg-white/10'
@@ -135,7 +135,7 @@ export default function Header() {
           <a
             href="#contact"
             onClick={jumpToQuote}
-            className={`hidden lg:inline-flex items-center gap-1.5 rounded-full border px-4 py-2 text-sm font-bold transition ${
+            className={`inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border px-3 py-2 text-[13px] font-bold transition xl:px-4 xl:text-sm ${
               scrolled
                 ? 'border-navy-600 bg-navy-600 text-white hover:bg-navy-700'
                 : 'border-white/40 bg-white/10 text-white backdrop-blur hover:bg-white/20'
@@ -148,7 +148,7 @@ export default function Header() {
             href={COMPANY.kakao}
             target="_blank"
             rel="noreferrer"
-            className="rounded-full bg-[#FEE500] px-5 py-2.5 text-sm font-bold text-[#3C1E1E] shadow-soft transition hover:-translate-y-0.5"
+            className="whitespace-nowrap rounded-full bg-[#FEE500] px-4 py-2.5 text-[13px] font-bold text-[#3C1E1E] shadow-soft transition hover:-translate-y-0.5 xl:px-5 xl:text-sm"
           >
             카톡 견적 신청
           </a>

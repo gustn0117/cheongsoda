@@ -58,14 +58,16 @@ export default function Hero() {
       <div className="container-px mx-auto max-w-7xl pt-24 pb-14 sm:pt-40 sm:pb-28 lg:pt-48 lg:pb-36">
         <div className="grid gap-8 lg:grid-cols-[1.1fr_1fr] lg:gap-16 lg:items-center">
           <div className="animate-fade-up">
-            <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3.5 py-1.5 text-[12px] font-bold text-white backdrop-blur sm:px-5 sm:py-2.5 sm:text-base">
-                <Bolt size={14} className="text-[#FEE500]" />
-                온라인 플랫폼 만족도 1위
+            <div className="grid grid-cols-1 gap-2 sm:flex sm:flex-wrap sm:items-center sm:gap-2.5">
+              <span className="inline-flex w-full items-center justify-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-[12px] font-bold text-white backdrop-blur sm:w-auto sm:px-5 sm:py-2.5 sm:text-base">
+                <Bolt size={13} className="shrink-0 text-[#FEE500]" />
+                <span className="truncate">온라인 플랫폼 만족도 1위</span>
               </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3.5 py-1.5 text-[12px] font-bold text-white backdrop-blur sm:px-5 sm:py-2.5 sm:text-base">
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                지금 33명이 견적 상담중
+              <span className="inline-flex w-full items-center justify-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-[12px] font-bold text-white backdrop-blur sm:w-auto sm:px-5 sm:py-2.5 sm:text-base">
+                <span className="grid h-[13px] w-[13px] shrink-0 place-items-center">
+                  <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
+                </span>
+                <span className="truncate">지금 33명이 견적 상담중</span>
               </span>
             </div>
 
