@@ -42,13 +42,13 @@ export default function Header() {
         <a
           href="#contact"
           onClick={jumpToQuote}
-          className={`inline-flex flex-1 min-w-0 items-center justify-center gap-1.5 rounded-full border px-3 py-2.5 text-[14px] font-bold transition sm:flex-none sm:px-3.5 sm:py-2 sm:text-sm lg:hidden ${
+          className={`inline-flex flex-1 min-w-0 items-center justify-center gap-2 rounded-full border px-4 py-3 text-base font-extrabold tracking-tight transition sm:flex-none sm:px-3.5 sm:py-2 sm:text-sm sm:font-bold lg:hidden ${
             scrolled
               ? 'border-navy-600 bg-navy-600 text-white hover:bg-navy-700 shadow-soft'
               : 'border-[#FEE500]/60 bg-[#FEE500]/15 text-white backdrop-blur hover:bg-[#FEE500]/25'
           }`}
         >
-          <span aria-hidden className="text-[15px] leading-none">🎁</span>
+          <span aria-hidden className="text-[18px] leading-none">🎁</span>
           <span className="truncate">청소견적 할인받기</span>
         </a>
 
