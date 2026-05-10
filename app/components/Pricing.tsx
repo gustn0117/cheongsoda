@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import { jumpToQuote } from '@/app/lib/scroll';
 import { ArrowRight, Check } from './Icons';
 
 const PER_PYEONG = 10000;
@@ -138,7 +139,11 @@ export default function Pricing() {
               ))}
             </div>
 
-            <a href="#contact" className="btn-primary mt-6 w-full sm:mt-7">
+            <a
+              href="#contact"
+              onClick={jumpToQuote}
+              className="btn-primary mt-6 w-full sm:mt-7"
+            >
               이 견적으로 상담 요청하기
               <ArrowRight size={16} />
             </a>

@@ -27,7 +27,7 @@ export default function CallCTA() {
           {/* 전화 카드 */}
           <a
             href={`tel:${COMPANY.phoneTel}`}
-            className="group relative overflow-hidden rounded-[28px] border border-navy-100 bg-gradient-to-br from-navy-50 via-white to-mist p-7 transition hover:-translate-y-1 hover:shadow-navy-lg sm:p-8"
+            className="group relative overflow-hidden rounded-[28px] border border-navy-100 bg-gradient-to-br from-navy-50 via-white to-mist p-5 transition hover:-translate-y-1 hover:shadow-navy-lg sm:p-8"
           >
             <div
               className="absolute inset-0 opacity-0 transition group-hover:opacity-100"
@@ -66,7 +66,7 @@ export default function CallCTA() {
             href={COMPANY.kakao}
             target="_blank"
             rel="noreferrer"
-            className="group relative overflow-hidden rounded-[28px] border border-[#FEE500]/40 bg-[#FEE500] p-7 text-[#3C1E1E] transition hover:-translate-y-1 hover:shadow-navy-lg sm:p-8"
+            className="group relative overflow-hidden rounded-[28px] border border-[#FEE500]/40 bg-[#FEE500] p-5 text-[#3C1E1E] transition hover:-translate-y-1 hover:shadow-navy-lg sm:p-8"
           >
             <div
               className="absolute inset-0 opacity-0 transition group-hover:opacity-100"
@@ -105,7 +105,7 @@ export default function CallCTA() {
             href={COMPANY.blog}
             target="_blank"
             rel="noreferrer"
-            className="group relative overflow-hidden rounded-[28px] border border-emerald-100 bg-gradient-to-br from-[#03C75A] via-[#04B850] to-[#02A14A] p-7 text-white transition hover:-translate-y-1 hover:shadow-navy-lg sm:p-8"
+            className="group relative overflow-hidden rounded-[28px] border border-emerald-100 bg-gradient-to-br from-[#03C75A] via-[#04B850] to-[#02A14A] p-5 text-white transition hover:-translate-y-1 hover:shadow-navy-lg sm:p-8"
           >
             <div
               className="absolute inset-0 opacity-0 transition group-hover:opacity-100"
@@ -144,7 +144,7 @@ export default function CallCTA() {
             href={COMPANY.instagram}
             target="_blank"
             rel="noreferrer"
-            className="group relative overflow-hidden rounded-[28px] p-7 text-white transition hover:-translate-y-1 hover:shadow-navy-lg sm:p-8"
+            className="group relative overflow-hidden rounded-[28px] p-5 text-white transition hover:-translate-y-1 hover:shadow-navy-lg sm:p-8"
             style={{
               background:
                 'linear-gradient(135deg, #FEDA75 0%, #FA7E1E 25%, #D62976 50%, #962FBF 75%, #4F5BD5 100%)',
@@ -187,7 +187,7 @@ export default function CallCTA() {
             href={COMPANY.youtube}
             target="_blank"
             rel="noreferrer"
-            className="group relative overflow-hidden rounded-[28px] border border-red-200 bg-gradient-to-br from-[#FF3030] via-[#FF0000] to-[#CC0000] p-7 text-white transition hover:-translate-y-1 hover:shadow-navy-lg sm:p-8"
+            className="group relative overflow-hidden rounded-[28px] border border-red-200 bg-gradient-to-br from-[#FF3030] via-[#FF0000] to-[#CC0000] p-5 text-white transition hover:-translate-y-1 hover:shadow-navy-lg sm:p-8"
           >
             <div
               className="absolute inset-0 opacity-0 transition group-hover:opacity-100"
@@ -226,7 +226,7 @@ export default function CallCTA() {
             href={COMPANY.soomgo}
             target="_blank"
             rel="noreferrer"
-            className="group relative overflow-hidden rounded-[28px] border border-navy-100 bg-gradient-to-br from-[#1F4FF1] via-[#2D5BFF] to-[#0E3AC8] p-7 text-white transition hover:-translate-y-1 hover:shadow-navy-lg sm:p-8"
+            className="group relative overflow-hidden rounded-[28px] border border-navy-100 bg-gradient-to-br from-[#1F4FF1] via-[#2D5BFF] to-[#0E3AC8] p-5 text-white transition hover:-translate-y-1 hover:shadow-navy-lg sm:p-8"
           >
             <div
               className="absolute inset-0 opacity-0 transition group-hover:opacity-100"

@@ -62,12 +62,13 @@ export default function FloatingCTA() {
 
       <a
         href={`tel:${COMPANY.phoneTel}`}
-        className="group flex items-center gap-2.5 rounded-full bg-white px-3 py-2.5 shadow-navy-lg ring-1 ring-navy-100 transition hover:-translate-y-0.5 sm:px-4 sm:py-3"
+        className="group grid h-11 w-11 place-items-center rounded-full bg-navy-600 text-white shadow-navy-lg transition hover:-translate-y-0.5 sm:h-auto sm:w-auto sm:grid-cols-none sm:flex sm:items-center sm:gap-2.5 sm:bg-white sm:px-4 sm:py-3 sm:ring-1 sm:ring-navy-100"
         aria-label="전화 상담"
       >
-        <span className="grid h-9 w-9 place-items-center rounded-full bg-navy-600 text-white sm:h-10 sm:w-10">
+        <span className="hidden sm:grid sm:h-10 sm:w-10 sm:place-items-center sm:rounded-full sm:bg-navy-600 sm:text-white">
           <Phone size={16} />
         </span>
+        <Phone size={18} className="sm:hidden" />
         <span className="hidden sm:flex flex-col leading-tight pr-1">
           <span className="text-[11px] font-semibold text-navy-500">24시간 상담</span>
           <span className="text-sm font-extrabold text-ink number-tabular">{COMPANY.phone}</span>
@@ -78,12 +79,13 @@ export default function FloatingCTA() {
         href={COMPANY.kakao}
         target="_blank"
         rel="noreferrer"
-        className="group flex items-center gap-2.5 rounded-full bg-[#FEE500] px-3 py-2.5 shadow-navy-lg transition hover:-translate-y-0.5 animate-pulse-soft sm:px-4 sm:py-3"
+        className="group grid h-11 w-11 place-items-center rounded-full bg-[#FEE500] text-[#3C1E1E] shadow-navy-lg transition hover:-translate-y-0.5 animate-pulse-soft sm:h-auto sm:w-auto sm:grid-cols-none sm:flex sm:items-center sm:gap-2.5 sm:px-4 sm:py-3"
         aria-label="카카오톡 상담"
       >
-        <span className="grid h-9 w-9 place-items-center rounded-full bg-[#3C1E1E] text-[#FEE500] sm:h-10 sm:w-10">
+        <span className="hidden sm:grid sm:h-10 sm:w-10 sm:place-items-center sm:rounded-full sm:bg-[#3C1E1E] sm:text-[#FEE500]">
           <KakaoBubble size={16} />
         </span>
+        <KakaoBubble size={18} className="sm:hidden" />
         <span className="hidden sm:flex flex-col leading-tight pr-1">
           <span className="text-[11px] font-semibold text-[#3C1E1E]/70">무료 견적</span>
           <span className="text-sm font-extrabold text-[#3C1E1E]">카톡 상담하기</span>

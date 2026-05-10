@@ -1,4 +1,7 @@
+'use client';
+
 import { SERVICES } from '@/app/lib/data';
+import { jumpToQuote } from '@/app/lib/scroll';
 import { ArrowRight, Gem, Leaf, Shield } from './Icons';
 
 export default function Services() {
@@ -25,6 +28,7 @@ export default function Services() {
             <a
               key={s.slug}
               href="#contact"
+              onClick={jumpToQuote}
               aria-label={`${s.title} 문의하기`}
               className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-navy-100 bg-white shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-navy-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-600 focus-visible:ring-offset-2 sm:rounded-3xl"
               style={{ animationDelay: `${i * 60}ms` }}

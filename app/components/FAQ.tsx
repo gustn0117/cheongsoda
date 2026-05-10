@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { FAQS } from '@/app/lib/data';
+import { jumpToQuote } from '@/app/lib/scroll';
 
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
@@ -72,8 +73,12 @@ export default function FAQ() {
 
         <div className="mt-8 flex flex-col items-center gap-3 sm:mt-10 sm:flex-row sm:justify-center">
           <p className="text-sm text-ink/60">더 궁금한 점이 있으신가요?</p>
-          <a href="#contact" className="btn-kakao !py-3 text-sm">
-            카톡으로 1:1 상담
+          <a
+            href="#contact"
+            onClick={jumpToQuote}
+            className="btn-kakao !py-3 text-sm"
+          >
+            견적 문의 바로가기
           </a>
         </div>
       </div>

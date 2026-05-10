@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { COMPANY } from '@/app/lib/data';
+import { jumpToQuote } from '@/app/lib/scroll';
 import Logo from './Logo';
 import { CloseIcon, Instagram, MenuIcon, NaverBlog, Phone, Soomgo, YouTube } from './Icons';
 
@@ -33,21 +34,22 @@ export default function Header() {
           : 'bg-transparent'
       }`}
     >
-      <div className="container-px mx-auto flex max-w-7xl items-center justify-between gap-3 py-3.5">
+      <div className="container-px mx-auto flex max-w-7xl items-center justify-between gap-2 py-3 sm:gap-3 sm:py-3.5">
         <a href="#top" className="flex shrink-0 items-center" aria-label="청소다 홈">
           <Logo variant={scrolled ? 'navy' : 'white'} />
         </a>
 
         <a
           href="#contact"
-          className={`inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-bold transition sm:px-4 sm:py-2 sm:text-sm lg:hidden ${
+          onClick={jumpToQuote}
+          className={`inline-flex flex-1 shrink min-w-0 items-center justify-center gap-1.5 rounded-full border px-3 py-2.5 text-[13px] font-bold transition sm:max-w-fit sm:px-4 sm:py-2 sm:text-sm lg:hidden ${
             scrolled
-              ? 'border-navy-600 bg-navy-600 text-white hover:bg-navy-700'
-              : 'border-white/40 bg-white/10 text-white backdrop-blur hover:bg-white/20'
+              ? 'border-navy-600 bg-navy-600 text-white hover:bg-navy-700 shadow-soft'
+              : 'border-[#FEE500]/60 bg-[#FEE500]/15 text-white backdrop-blur hover:bg-[#FEE500]/25'
           }`}
         >
           <span aria-hidden>🎁</span>
-          청소견적 할인받기
+          <span className="truncate">청소견적 할인받기</span>
         </a>
 
         <nav className="hidden lg:flex items-center gap-1">
@@ -132,6 +134,7 @@ export default function Header() {
           </a>
           <a
             href="#contact"
+            onClick={jumpToQuote}
             className={`hidden lg:inline-flex items-center gap-1.5 rounded-full border px-4 py-2 text-sm font-bold transition ${
               scrolled
                 ? 'border-navy-600 bg-navy-600 text-white hover:bg-navy-700'

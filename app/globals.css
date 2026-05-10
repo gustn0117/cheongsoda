@@ -19,6 +19,10 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* 모든 앵커 점프 시 고정 헤더 가림 방지 */
+section[id] { scroll-margin-top: 72px; }
+@media (min-width: 1024px) { section[id] { scroll-margin-top: 88px; } }
+
 body {
   font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
   font-feature-settings: 'ss03', 'cv02';

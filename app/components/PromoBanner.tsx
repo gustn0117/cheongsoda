@@ -4,8 +4,8 @@ import { KakaoBubble, Phone } from './Icons';
 export default function PromoBanner() {
   return (
     <section className="relative overflow-hidden">
-      <div className="container-px mx-auto max-w-7xl py-14 sm:py-20">
-        <div className="relative overflow-hidden rounded-[28px] border border-navy-100 bg-gradient-to-br from-navy-700 via-navy-800 to-navy-950 px-6 py-10 text-white shadow-navy-lg sm:rounded-[32px] sm:px-12 sm:py-16">
+      <div className="container-px mx-auto max-w-7xl py-12 sm:py-20">
+        <div className="relative overflow-hidden rounded-[24px] border border-navy-100 bg-gradient-to-br from-navy-700 via-navy-800 to-navy-950 px-5 py-8 text-white shadow-navy-lg sm:rounded-[32px] sm:px-12 sm:py-16">
           <div
             className="absolute inset-0 opacity-50"
             style={{
@@ -20,30 +20,30 @@ export default function PromoBanner() {
                 <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#FEE500]" />
                 FREE EVENT
               </div>
-              <h2 className="heading-section mt-4 text-[1.65rem] sm:mt-5 sm:text-4xl lg:text-5xl break-keep">
+              <h2 className="heading-section mt-4 text-[1.5rem] sm:mt-5 sm:text-4xl lg:text-5xl break-keep">
                 지금 신청하면 <span className="text-[#7DA0FF]">평당 가격</span>
                 <br />
                 <span className="text-[#FEE500]">이벤트 진행중</span>
                 <br />+ 리뷰 작성 시{' '}
                 <span className="text-[#FEE500]">2만원 현금 페이백</span>
               </h2>
-              <p className="mt-4 max-w-xl text-sm text-white/80 sm:mt-5 sm:text-base break-keep">
+              <p className="mt-3.5 max-w-xl text-[13px] text-white/80 sm:mt-5 sm:text-base break-keep">
                 전국 어디든 출장비 0원 · 평일·주말 동일 가격. 사진과 평수만 보내주시면 카톡으로
                 즉시 견적을 안내드립니다. 살균·피톤치드는 추가 비용 없이 무료입니다.
               </p>
-              <div className="mt-6 flex flex-wrap items-center gap-2.5 sm:mt-7 sm:gap-3">
+              <div className="mt-5 grid grid-cols-1 gap-2 sm:mt-7 sm:flex sm:flex-wrap sm:items-center sm:gap-3">
                 <a
                   href={COMPANY.kakao}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#FEE500] px-6 py-3.5 text-base font-bold text-[#3C1E1E] shadow-soft transition hover:-translate-y-0.5 hover:shadow-lg"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#FEE500] px-6 py-3.5 text-base font-bold text-[#3C1E1E] shadow-soft transition hover:-translate-y-0.5 hover:shadow-lg sm:w-auto"
                 >
                   <KakaoBubble size={18} />
                   카톡으로 즉시 견적
                 </a>
                 <a
                   href={`tel:${COMPANY.phoneTel}`}
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/5 px-6 py-3.5 text-base font-bold text-white backdrop-blur transition hover:bg-white/15 number-tabular"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/30 bg-white/5 px-6 py-3.5 text-base font-bold text-white backdrop-blur transition hover:bg-white/15 number-tabular sm:w-auto"
                 >
                   <Phone size={16} />
                   {COMPANY.phone}
@@ -51,7 +51,7 @@ export default function PromoBanner() {
               </div>
             </div>
 
-            <div className="grid gap-3">
+            <div className="grid gap-2.5 sm:gap-3">
               {[
                 { v: '이벤트 진행중', l: '지역별 맞춤 청소 견적', tone: 'gold' },
                 { v: '2만원', l: '리뷰 작성 페이백' },
@@ -60,15 +60,15 @@ export default function PromoBanner() {
               ].map((b, i) => (
                 <div
                   key={b.l}
-                  className={`flex items-center justify-between rounded-2xl border px-5 py-4 ${
+                  className={`flex items-center justify-between gap-2 rounded-2xl border px-4 py-3 sm:px-5 sm:py-4 ${
                     i === 0
                       ? 'border-[#FEE500]/50 bg-[#FEE500]/10'
                       : 'border-white/15 bg-white/5'
                   }`}
                 >
-                  <span className="text-sm text-white/75">{b.l}</span>
+                  <span className="text-[13px] text-white/75 break-keep sm:text-sm">{b.l}</span>
                   <span
-                    className={`number-tabular text-lg font-extrabold ${
+                    className={`number-tabular text-base font-extrabold shrink-0 sm:text-lg ${
                       b.tone === 'gold' ? 'text-[#FEE500]' : 'text-white'
                     }`}
                   >
