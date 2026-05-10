@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { COMPANY, PYEONG_OPTIONS, REGIONS, SERVICE_OPTIONS } from '@/app/lib/data';
 import { supabase } from '@/app/lib/supabase';
-import { ArrowRight, CheckCircle, ChevronDown, KakaoBubble } from './Icons';
+import { ArrowRight, CheckCircle, ChevronDown, KakaoBubble, Phone } from './Icons';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -95,20 +95,21 @@ export default function QuoteForm() {
               ))}
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-2.5 sm:mt-10 sm:gap-3">
+            <div className="mt-8 flex flex-wrap items-center gap-2.5 sm:mt-10 sm:gap-3">
               <a
                 href={COMPANY.kakao}
                 target="_blank"
                 rel="noreferrer"
-                className="btn-kakao !px-5 !py-3.5 text-sm sm:!px-7 sm:!py-4 sm:text-base"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#FEE500] px-6 py-3.5 text-base font-bold text-[#3C1E1E] shadow-soft transition hover:-translate-y-0.5 hover:shadow-lg"
               >
-                <KakaoBubble size={16} />
+                <KakaoBubble size={18} />
                 카톡 상담하기
               </a>
               <a
                 href={`tel:${COMPANY.phoneTel}`}
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/5 px-5 py-3.5 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/15 number-tabular sm:px-7 sm:py-4 sm:text-base"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/5 px-6 py-3.5 text-base font-bold text-white backdrop-blur transition hover:bg-white/15 number-tabular"
               >
+                <Phone size={16} />
                 {COMPANY.phone}
               </a>
             </div>

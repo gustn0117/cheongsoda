@@ -31,21 +31,21 @@ export default function PromoBanner() {
                 전국 어디든 출장비 0원 · 평일·주말 동일 가격. 사진과 평수만 보내주시면 카톡으로
                 즉시 견적을 안내드립니다. 살균·피톤치드는 추가 비용 없이 무료입니다.
               </p>
-              <div className="mt-6 flex flex-wrap gap-2.5 sm:mt-7 sm:gap-3">
+              <div className="mt-6 flex flex-wrap items-center gap-2.5 sm:mt-7 sm:gap-3">
                 <a
                   href={COMPANY.kakao}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn-kakao !px-5 !py-3.5 text-sm sm:!px-7 sm:!py-4 sm:text-base"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#FEE500] px-6 py-3.5 text-base font-bold text-[#3C1E1E] shadow-soft transition hover:-translate-y-0.5 hover:shadow-lg"
                 >
-                  <KakaoBubble size={16} />
+                  <KakaoBubble size={18} />
                   카톡으로 즉시 견적
                 </a>
                 <a
                   href={`tel:${COMPANY.phoneTel}`}
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/5 px-5 py-3.5 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/15 number-tabular sm:px-7 sm:py-4 sm:text-base"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/5 px-6 py-3.5 text-base font-bold text-white backdrop-blur transition hover:bg-white/15 number-tabular"
                 >
-                  <Phone size={14} />
+                  <Phone size={16} />
                   {COMPANY.phone}
                 </a>
               </div>

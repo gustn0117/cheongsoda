@@ -33,9 +33,21 @@ export default function Header() {
           : 'bg-transparent'
       }`}
     >
-      <div className="container-px mx-auto flex max-w-7xl items-center justify-between py-3.5">
-        <a href="#top" className="flex items-center" aria-label="청소다 홈">
+      <div className="container-px mx-auto flex max-w-7xl items-center justify-between gap-3 py-3.5">
+        <a href="#top" className="flex shrink-0 items-center" aria-label="청소다 홈">
           <Logo variant={scrolled ? 'navy' : 'white'} />
+        </a>
+
+        <a
+          href="#contact"
+          className={`inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-bold transition sm:px-4 sm:py-2 sm:text-sm lg:hidden ${
+            scrolled
+              ? 'border-navy-600 bg-navy-600 text-white hover:bg-navy-700'
+              : 'border-white/40 bg-white/10 text-white backdrop-blur hover:bg-white/20'
+          }`}
+        >
+          <span aria-hidden>🎁</span>
+          청소견적 할인받기
         </a>
 
         <nav className="hidden lg:flex items-center gap-1">
@@ -117,6 +129,17 @@ export default function Header() {
           >
             <Phone size={14} />
             {COMPANY.phone}
+          </a>
+          <a
+            href="#contact"
+            className={`hidden lg:inline-flex items-center gap-1.5 rounded-full border px-4 py-2 text-sm font-bold transition ${
+              scrolled
+                ? 'border-navy-600 bg-navy-600 text-white hover:bg-navy-700'
+                : 'border-white/40 bg-white/10 text-white backdrop-blur hover:bg-white/20'
+            }`}
+          >
+            <span aria-hidden>🎁</span>
+            청소견적 할인받기
           </a>
           <a
             href={COMPANY.kakao}

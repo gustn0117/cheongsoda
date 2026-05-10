@@ -58,11 +58,11 @@ export default function Hero() {
         <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-16 lg:items-center">
           <div className="animate-fade-up">
             <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#FEE500]/40 bg-[#FEE500]/10 px-3.5 py-2 text-sm font-bold text-[#FEE500] sm:px-4 sm:text-base">
-                <Bolt size={15} />
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm font-bold text-white backdrop-blur sm:px-5 sm:py-2.5 sm:text-base">
+                <Bolt size={15} className="text-[#FEE500]" />
                 온라인 플랫폼 만족도 1위
               </span>
-              <span className="chip-glow !px-3.5 !py-2 !text-sm sm:!px-4 sm:!text-base">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm font-bold text-white backdrop-blur sm:px-5 sm:py-2.5 sm:text-base">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
                 지금 33명이 견적 상담중
               </span>
@@ -94,24 +94,17 @@ export default function Hero() {
                 href={COMPANY.kakao}
                 target="_blank"
                 rel="noreferrer"
-                className="btn-kakao !px-5 !py-3.5 text-base sm:!px-7 sm:!py-4 sm:text-lg"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#FEE500] px-6 py-3.5 text-base font-bold text-[#3C1E1E] shadow-soft transition hover:-translate-y-0.5 hover:shadow-lg sm:px-7 sm:py-4"
               >
                 <KakaoBubble size={18} />
                 카톡으로 무료 견적
               </a>
               <a
                 href={`tel:${COMPANY.phoneTel}`}
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/5 px-5 py-3.5 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/15 number-tabular sm:px-7 sm:py-4 sm:text-base"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/5 px-6 py-3.5 text-base font-bold text-white backdrop-blur transition hover:bg-white/15 number-tabular sm:px-7 sm:py-4"
               >
-                <Phone size={14} />
+                <Phone size={16} />
                 {COMPANY.phone}
-              </a>
-              <a
-                href="#services"
-                className="hidden sm:inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/5 px-7 py-4 text-base font-semibold text-white backdrop-blur transition hover:bg-white/15"
-              >
-                서비스 둘러보기
-                <ArrowRight size={16} />
               </a>
             </div>
 

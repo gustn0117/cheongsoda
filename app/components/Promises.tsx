@@ -18,8 +18,10 @@ export default function Promises() {
         <div className="mx-auto max-w-3xl text-center">
           <span className="section-eyebrow">Our Promise</span>
           <h2 className="heading-section mt-3 text-[2rem] text-ink sm:mt-4 sm:text-5xl lg:text-6xl break-keep">
-            <span className="text-navy-600">&apos;청소다&apos;</span>가{' '}
-            <span className="text-[#FF8A3D]">고객님과의 약속</span>
+            <span className="text-navy-600">&apos;청소다&apos;</span>
+            <span className="text-ink">가 </span>
+            <span className="text-[#FF8A3D]">고객님께 약속</span>
+            <span className="text-ink"> 드리겠습니다.</span>
           </h2>
           <p className="mt-4 text-sm text-ink/70 sm:mt-6 sm:text-lg break-keep">
             30대 청년들이 운영하는 청소다는
@@ -75,23 +77,23 @@ export default function Promises() {
               </article>
             ))}
 
-            {/* 마지막 카드: 이미지 */}
-            <article className="relative overflow-hidden rounded-2xl border border-navy-100 bg-navy-600 p-5 text-white shadow-glow sm:rounded-3xl sm:p-7">
-              <div
-                className="absolute inset-0 opacity-50"
-                style={{
-                  backgroundImage:
-                    'radial-gradient(45% 45% at 0% 100%, rgba(61,93,200,0.6) 0%, transparent 60%), radial-gradient(50% 60% at 100% 0%, rgba(254,229,0,0.25) 0%, transparent 60%)',
-                }}
-              />
-              <div className="relative">
-                <span className="number-tabular text-3xl font-black text-white/30">06</span>
-                <h3 className="mt-3 text-lg font-extrabold sm:text-xl break-keep">내 집처럼 청소합니다</h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-white/80 sm:mt-2 break-keep">
-                  새로 시작하시는 공간에서 기분 좋은 일들만 가득하도록, 보이지 않는 곳까지 더
-                  신경 써서 작업합니다.
-                </p>
+            {/* 06: 다른 카드들과 동일한 흰 바탕+체크 스타일 */}
+            <article className="group relative overflow-hidden rounded-2xl border border-navy-100 bg-white p-5 shadow-soft transition hover:-translate-y-1 hover:shadow-navy-lg sm:rounded-3xl sm:p-7">
+              <div className="flex items-center justify-between">
+                <span className="number-tabular text-3xl font-black text-navy-100 group-hover:text-navy-200">
+                  06
+                </span>
+                <span className="grid h-9 w-9 place-items-center rounded-full bg-navy-50 text-navy-600 transition group-hover:bg-navy-600 group-hover:text-white">
+                  <Check size={16} strokeWidth={3} />
+                </span>
               </div>
+              <h3 className="mt-3 text-base font-extrabold text-ink sm:text-lg break-keep">
+                내 집처럼 청소합니다
+              </h3>
+              <p className="mt-1.5 text-sm leading-relaxed text-ink/65 sm:mt-2 break-keep">
+                새로 시작하시는 공간에서 기분 좋은 일들만 가득하도록, 보이지 않는 곳까지 더
+                신경 써서 작업합니다.
+              </p>
             </article>
           </div>
 
