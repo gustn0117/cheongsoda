@@ -34,7 +34,7 @@ export default function Header() {
           : 'bg-transparent'
       }`}
     >
-      <div className="container-px mx-auto flex max-w-7xl items-center justify-between gap-2 py-3 sm:gap-3 sm:py-3.5">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-1 px-2 py-3 sm:gap-3 sm:px-8 sm:py-3.5 lg:px-12">
         <a href="#top" className="flex shrink-0 items-center" aria-label="청소다 홈">
           <Logo variant={scrolled ? 'navy' : 'white'} />
         </a>
