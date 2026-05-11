@@ -14,7 +14,7 @@ export default function Logo({ variant = 'navy', className = '' }: LogoProps) {
       <img
         src={src}
         alt="청소다"
-        className="h-10 w-auto select-none sm:h-12"
+        className="h-14 w-auto select-none sm:h-12"
         draggable={false}
       />
     </span>
