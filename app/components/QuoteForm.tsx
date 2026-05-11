@@ -66,7 +66,7 @@ export default function QuoteForm() {
 
       <div className="container-px mx-auto max-w-7xl">
         <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:gap-10">
-          <div className="order-2 text-white lg:order-1">
+          <div className="order-2 hidden text-white lg:order-1 lg:block">
             <span className="section-eyebrow !text-[#FEE500]">Free Quote</span>
             <h2 className="heading-section mt-3 text-[1.65rem] sm:mt-4 sm:text-5xl lg:text-6xl break-keep">
               30초 만에
@@ -116,9 +116,13 @@ export default function QuoteForm() {
           </div>
 
           {/* Form card */}
-          <div id="quote-card" className="relative order-1 scroll-mt-24 lg:order-2">
-            <div className="absolute -inset-1 rounded-[32px] bg-gradient-to-br from-[#FEE500]/30 via-white/10 to-transparent blur-2xl" />
-            <form
+          <div className="order-1 lg:order-2">
+            <span className="section-eyebrow !text-[#FEE500] mb-4 block lg:hidden">
+              Free Quote
+            </span>
+            <div id="quote-card" className="relative scroll-mt-24">
+              <div className="absolute -inset-1 rounded-[32px] bg-gradient-to-br from-[#FEE500]/30 via-white/10 to-transparent blur-2xl" />
+              <form
               onSubmit={handleSubmit}
               className="relative rounded-[28px] border border-white/40 bg-white p-5 shadow-navy-lg sm:p-8"
             >
@@ -220,6 +224,7 @@ export default function QuoteForm() {
                 평균 응대 시간 5분 이내 · 영업일 기준
               </p>
             </form>
+            </div>
           </div>
         </div>
       </div>
