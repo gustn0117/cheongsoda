@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: '청소다',
     images: [
       {
-        url: '/og-image.png',
+        url: '/og-image.png?v=2',
         width: 1200,
         height: 630,
         alt: '청소다 - 종합청소업체 1위',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: TITLE,
     description: DESCRIPTION,
-    images: ['/og-image.png'],
+    images: ['/og-image.png?v=2'],
   },
   icons: {
     icon: '/logo/logo-mono-dark.png',
