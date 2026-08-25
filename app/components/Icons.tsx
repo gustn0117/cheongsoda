@@ -241,6 +241,57 @@ export function ExternalLink(props: IconProps) {
   );
 }
 
+export function Play(props: IconProps) {
+  return (
+    <svg
+      width={props.size ?? 18}
+      height={props.size ?? 18}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={props.className}
+      aria-hidden
+    >
+      <polygon points="7 4 20 12 7 20" />
+    </svg>
+  );
+}
+
+export function Pause(props: IconProps) {
+  return (
+    <svg
+      width={props.size ?? 18}
+      height={props.size ?? 18}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={props.className}
+      aria-hidden
+    >
+      <rect x="6" y="4" width="4" height="16" rx="1.2" />
+      <rect x="14" y="4" width="4" height="16" rx="1.2" />
+    </svg>
+  );
+}
+
+export function SoundOn(props: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <polygon points="4 9 8 9 13 5 13 19 8 15 4 15" fill="currentColor" stroke="none" />
+      <path d="M16.5 8.5a5 5 0 0 1 0 7" />
+      <path d="M19 6a8.5 8.5 0 0 1 0 12" />
+    </svg>
+  );
+}
+
+export function SoundOff(props: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <polygon points="4 9 8 9 13 5 13 19 8 15 4 15" fill="currentColor" stroke="none" />
+      <line x1="17" y1="9.5" x2="22" y2="14.5" />
+      <line x1="22" y1="9.5" x2="17" y2="14.5" />
+    </svg>
+  );
+}
+
 export function Star(props: IconProps & { filled?: boolean }) {
   return (
     <svg

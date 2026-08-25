@@ -1,3 +1,4 @@
+import BrandFilm from './components/BrandFilm';
 import CallCTA from './components/CallCTA';
 import FAQ from './components/FAQ';
 import FloatingCTA from './components/FloatingCTA';
@@ -26,6 +27,7 @@ export default function Home() {
         <TrustBar />
         <TrustStrip />
         <Stats />
+        <BrandFilm />
         <Services />
         <Process />
         <Promises />
