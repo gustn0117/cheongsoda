@@ -43,7 +43,7 @@ export const SERVICES: Service[] = [
     summary: '입주 전·이사 후 빈 집 정밀 청소',
     detail:
       '새로 입주하시기 전 집안 곳곳에 남아있는 공사 먼지·오염물질·생활 흔적을 깨끗하게 제거하는 전문 청소 서비스입니다.',
-    image: '/services/v2-move-in.png',
+    image: '/services/v2-move-in.jpg',
   },
   {
     slug: 'live',
@@ -51,7 +51,7 @@ export const SERVICES: Service[] = [
     summary: '생활 중인 공간의 정기·일반 청소',
     detail:
       '짐이 있는 상태에서 생활하며 쌓인 먼지와 찌든 때를 깨끗하게 제거하는 전문 청소 서비스입니다.',
-    image: '/services/v2-live.png',
+    image: '/services/v2-live.jpg',
   },
   {
     slug: 'remodel',
@@ -59,7 +59,7 @@ export const SERVICES: Service[] = [
     summary: '인테리어 공사 후 분진·자국 제거',
     detail:
       '인테리어 공사 후 남은 먼지·분진·본드 자국 등을 깨끗하게 제거하는 전문 청소서비스입니다.',
-    image: '/services/v2-remodel.png',
+    image: '/services/v2-remodel.jpg',
   },
   {
     slug: 'shop',
@@ -67,7 +67,7 @@ export const SERVICES: Service[] = [
     summary: '오픈 전·후 매장과 사무실 정밀 청소',
     detail:
       '매장·사무실·상업공간에 쌓인 먼지와 오염을 깨끗하게 제거하는 전문 청소서비스입니다.',
-    image: '/services/v2-shop.png',
+    image: '/services/v2-shop.jpg',
   },
   {
     slug: 'special',
@@ -75,7 +75,7 @@ export const SERVICES: Service[] = [
     summary: '일반 청소로 어려운 특수 현장',
     detail:
       '고독사 현장·쓰레기집·장기간 방치 공간 등 일반 청소로 해결하기 어려운 현장을 전문 장비와 체계적인 작업으로 정리·복구하는 서비스입니다.',
-    image: '/services/v2-special.png',
+    image: '/services/v2-special.jpg',
   },
   {
     slug: 'waste',
@@ -83,7 +83,7 @@ export const SERVICES: Service[] = [
     summary: '생활·대형 폐기물 수거 정리',
     detail:
       '생활폐기물·대형폐기물·방치된 잡동사니 등 각종 불필요한 물품을 신속하고 체계적으로 수거·정리하는 서비스입니다.',
-    image: '/services/v2-waste.png',
+    image: '/services/v2-waste.jpg',
   },
   {
     slug: 'appliance',
@@ -91,7 +91,7 @@ export const SERVICES: Service[] = [
     summary: '에어컨·세탁기·냉장고·건조기 청소',
     detail:
       '에어컨을 비롯한 세탁기·냉장고·건조기 등 생활 가전 내부와 외부에 쌓인 먼지·곰팡이·오염물을 꼼꼼하게 제거하는 전문 청소서비스입니다.',
-    image: '/services/v2-appliance.png',
+    image: '/services/v2-appliance.jpg',
   },
   {
     slug: 'organize',
@@ -99,7 +99,7 @@ export const SERVICES: Service[] = [
     summary: '옷장·팬트리·주방·창고 정리',
     detail:
       '옷장·팬트리·주방·창고 등 생활 공간을 효율적인 동선에 맞춰 깔끔하게 배치하고 체계적으로 정리하는 서비스입니다.',
-    image: '/services/v2-organize.png',
+    image: '/services/v2-organize.jpg',
   },
   {
     slug: 'grout-coating',
@@ -107,7 +107,7 @@ export const SERVICES: Service[] = [
     summary: '욕실·주방·베란다 줄눈 + 코팅',
     detail:
       '욕실·주방·베란다 등 공간의 타일 줄눈과 벽면을 시공·코팅하여 오염·곰팡이·결로 발생을 줄여드리는 전문 서비스입니다.',
-    image: '/services/v2-grout-coating.png',
+    image: '/services/v2-grout-coating.jpg',
   },
 ];
 
