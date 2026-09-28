@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { COMPANY } from '@/app/lib/data';
+import { COMPANY, PHONES } from '@/app/lib/data';
 import { jumpToQuote } from '@/app/lib/scroll';
 import Logo from './Logo';
 import { CloseIcon, Instagram, MenuIcon, NaverBlog, Phone, Soomgo, YouTube } from './Icons';
@@ -179,14 +179,18 @@ export default function Header() {
                 {item.label}
               </a>
             ))}
-            <a
-              href={`tel:${COMPANY.phoneTel}`}
-              onClick={() => setMobileOpen(false)}
-              className="mt-3 flex items-center justify-center gap-2 rounded-xl border border-navy-200 px-4 py-3 text-center text-base font-bold text-navy-700 number-tabular"
-            >
-              <Phone size={16} />
-              {COMPANY.phone}
-            </a>
+            {PHONES.map((p) => (
+              <a
+                key={p.tel}
+                href={`tel:${p.tel}`}
+                onClick={() => setMobileOpen(false)}
+                className="mt-3 flex items-center justify-center gap-2 rounded-xl border border-navy-200 px-4 py-3 text-center text-base font-bold text-navy-700 number-tabular"
+              >
+                <Phone size={16} />
+                <span className="text-sm font-semibold text-navy-500">{p.label}</span>
+                {p.number}
+              </a>
+            ))}
             <a
               href={COMPANY.kakao}
               target="_blank"

@@ -4,8 +4,8 @@ export const COMPANY = {
   tagline: '종합청소업체 본사',
   phone: '1599-1807',
   phoneTel: '15991807',
-  mobile: '010-5000-0687',
-  mobileTel: '01050000687',
+  direct: '010-5000-0687',
+  directTel: '01050000687',
   kakao: 'https://pf.kakao.com/_xfEKxjX/chat',
   kakaoHandle: 'pf.kakao.com/_xfEKxjX',
   blog: 'https://blog.naver.com/cheongsoda',
@@ -22,6 +22,11 @@ export const COMPANY = {
   insurance: '대물 1억원 영업 배상책임 보험 가입',
   team: '하청X · 알바X · 20~40대 직영팀 50팀 운영',
 };
+
+export const PHONES = [
+  { label: '대표번호', number: COMPANY.phone, tel: COMPANY.phoneTel },
+  { label: '다이렉트', number: COMPANY.direct, tel: COMPANY.directTel },
+];
 
 export type Service = {
   slug: string;

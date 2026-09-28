@@ -1,4 +1,4 @@
-import { COMPANY } from '@/app/lib/data';
+import { COMPANY, PHONES } from '@/app/lib/data';
 import {
   ArrowRight,
   ExternalLink,
@@ -24,11 +24,8 @@ export default function CallCTA() {
         </div>
 
         <div className="grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {/* 전화 카드 */}
-          <a
-            href={`tel:${COMPANY.phoneTel}`}
-            className="group relative overflow-hidden rounded-[28px] border border-navy-100 bg-gradient-to-br from-navy-50 via-white to-mist p-5 transition hover:-translate-y-1 hover:shadow-navy-lg sm:p-8"
-          >
+          {/* 전화 카드: 번호마다 따로 탭해서 통화 */}
+          <div className="group relative overflow-hidden rounded-[28px] border border-navy-100 bg-gradient-to-br from-navy-50 via-white to-mist p-5 transition hover:-translate-y-1 hover:shadow-navy-lg sm:p-8">
             <div
               className="absolute inset-0 opacity-0 transition group-hover:opacity-100"
               style={{
@@ -47,19 +44,28 @@ export default function CallCTA() {
                 <p className="mt-1.5 text-sm text-ink/65 break-keep">
                   본사 직영 상담원이 직접 응대 · 24시간
                 </p>
-                <div className="mt-5 number-tabular text-2xl font-black text-navy-700 sm:text-3xl">
-                  {COMPANY.phone}
-                </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-navy-600 text-white shadow-glow transition group-hover:scale-110 sm:h-12 sm:w-12">
                 <Phone size={20} />
               </span>
             </div>
+            <div className="relative mt-5 grid gap-3">
+              {PHONES.map((p) => (
+                <a
+                  key={p.tel}
+                  href={`tel:${p.tel}`}
+                  className="block text-navy-700 transition hover:text-navy-500"
+                >
+                  <span className="block text-xs font-bold text-navy-500">{p.label}</span>
+                  <span className="number-tabular text-2xl font-black">{p.number}</span>
+                </a>
+              ))}
+            </div>
             <div className="relative mt-6 inline-flex items-center gap-1.5 text-sm font-bold text-navy-700">
               번호 누르면 통화 연결
               <ArrowRight size={14} />
             </div>
-          </a>
+          </div>
 
           {/* 카톡 카드 */}
           <a

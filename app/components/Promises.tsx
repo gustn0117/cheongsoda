@@ -35,8 +35,10 @@ export default function Promises() {
         <div className="mx-auto mt-10 max-w-4xl sm:mt-12">
           <div className="relative overflow-hidden rounded-3xl border border-navy-100 bg-white shadow-soft sm:rounded-[32px]">
             <img
-              src="/team/group-shot.png"
+              src="/team/group-shot.jpg"
               alt="로얄클린 직영팀 단체샷"
+              width={1493}
+              height={1054}
               loading="lazy"
               className="block h-auto w-full"
             />

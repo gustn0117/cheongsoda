@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { COMPANY, PYEONG_OPTIONS, REGIONS, SERVICE_OPTIONS } from '@/app/lib/data';
+import { COMPANY, PHONES, PYEONG_OPTIONS, REGIONS, SERVICE_OPTIONS } from '@/app/lib/data';
 import { supabase } from '@/app/lib/supabase';
 import { ArrowRight, CheckCircle, ChevronDown, KakaoBubble, Phone } from './Icons';
 
@@ -105,13 +105,17 @@ export default function QuoteForm() {
                 <KakaoBubble size={18} />
                 카톡 상담하기
               </a>
-              <a
-                href={`tel:${COMPANY.phoneTel}`}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/30 bg-white/5 px-6 py-3.5 text-base font-bold text-white backdrop-blur transition hover:bg-white/15 number-tabular sm:w-auto"
-              >
-                <Phone size={16} />
-                {COMPANY.phone}
-              </a>
+              {PHONES.map((p) => (
+                <a
+                  key={p.tel}
+                  href={`tel:${p.tel}`}
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/30 bg-white/5 px-6 py-3.5 text-base font-bold text-white backdrop-blur transition hover:bg-white/15 number-tabular sm:w-auto"
+                >
+                  <Phone size={16} />
+                  <span className="text-sm font-semibold text-white/70">{p.label}</span>
+                  {p.number}
+                </a>
+              ))}
             </div>
           </div>
 

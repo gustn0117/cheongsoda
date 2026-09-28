@@ -1,4 +1,4 @@
-import { COMPANY } from '@/app/lib/data';
+import { COMPANY, PHONES } from '@/app/lib/data';
 import Logo from './Logo';
 import { Instagram, KakaoBubble, NaverBlog, Phone, Soomgo, YouTube } from './Icons';
 
@@ -24,13 +24,17 @@ export default function Footer() {
                 <KakaoBubble size={14} />
                 카톡 상담
               </a>
-              <a
-                href={`tel:${COMPANY.phoneTel}`}
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10 number-tabular"
-              >
-                <Phone size={14} />
-                {COMPANY.phone}
-              </a>
+              {PHONES.map((p) => (
+                <a
+                  key={p.tel}
+                  href={`tel:${p.tel}`}
+                  className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10 number-tabular"
+                >
+                  <Phone size={14} />
+                  <span className="text-white/60">{p.label}</span>
+                  {p.number}
+                </a>
+              ))}
               <a
                 href={COMPANY.blog}
                 target="_blank"
@@ -96,18 +100,14 @@ export default function Footer() {
               CONTACT
             </h4>
             <ul className="mt-5 space-y-3 text-sm">
-              <li>
-                <span className="block text-xs text-white/50">본사 대표번호</span>
-                <a href={`tel:${COMPANY.phoneTel}`} className="number-tabular transition hover:text-white">
-                  {COMPANY.phone}
-                </a>
-              </li>
-              <li>
-                <span className="block text-xs text-white/50">휴대폰</span>
-                <a href={`tel:${COMPANY.mobileTel}`} className="number-tabular transition hover:text-white">
-                  {COMPANY.mobile}
-                </a>
-              </li>
+              {PHONES.map((p) => (
+                <li key={p.tel}>
+                  <span className="block text-xs text-white/50">{p.label}</span>
+                  <a href={`tel:${p.tel}`} className="number-tabular transition hover:text-white">
+                    {p.number}
+                  </a>
+                </li>
+              ))}
               <li>
                 <span className="block text-xs text-white/50">서비스 지역</span>
                 {COMPANY.serviceArea}
