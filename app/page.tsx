@@ -1,4 +1,3 @@
-import BrandFilm from './components/BrandFilm';
 import CallCTA from './components/CallCTA';
 import FAQ from './components/FAQ';
 import FloatingCTA from './components/FloatingCTA';
@@ -27,7 +26,7 @@ export default function Home() {
         <TrustBar />
         <TrustStrip />
         <Stats />
-        <BrandFilm />
+        {/* 홍보영상(BrandFilm)은 로얄클린 새 영상 받을 때까지 잠시 내림 */}
         <Services />
         <Process />
         <Promises />

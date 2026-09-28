@@ -3,8 +3,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import { supabase, type Inquiry } from '@/app/lib/supabase';
 
-const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD ?? '1234';
-const SESSION_KEY = 'cheongsoda_admin_authed';
+const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD ?? '0809';
+const SESSION_KEY = 'royalclean_admin_authed';
 
 const STATUS_LABEL: Record<Inquiry['status'], string> = {
   new: '신규',
