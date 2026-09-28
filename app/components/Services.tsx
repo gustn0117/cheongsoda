@@ -15,10 +15,10 @@ export default function Services() {
             구석구석, <span className="text-navy-600">청소 + 시공</span>까지
           </h2>
           <p className="mt-4 text-sm text-ink/70 sm:mt-6 sm:text-lg break-keep">
-            입주·이사·거주·상가청소부터 줄눈시공·탄성코팅·폐기물처리까지
+            입주·이사·거주·상가청소부터 줄눈시공·탄성코팅·폐기물처리까지{' '}
             <br className="hidden sm:block" />
             한 번에 종합청소업체{' '}
-            <span className="font-bold text-navy-700">&apos;청소다&apos;</span>
+            <span className="font-bold text-navy-700">&apos;로얄클린&apos;</span>
             에서 완벽하게 케어해드리겠습니다.
           </p>
         </div>

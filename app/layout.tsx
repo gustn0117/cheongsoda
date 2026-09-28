@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 const SITE_URL = 'https://cheongsoda.com';
-const TITLE = '청소다 | 종합청소업체 1위 · 입주·이사·거주·상가청소';
+const TITLE = '로얄클린 | 종합청소업체 1위 · 입주·이사·거주·상가청소';
 const DESCRIPTION =
   '입주·이사·거주·상가청소 전문. 하청·알바 없는 전국 직영팀 50팀+ 운영, 피톤치드·스팀살균 전 고객 무료. 지금 카카오톡으로 무료 견적 받아보세요.';
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   keywords: [
-    '청소다',
+    '로얄클린',
     '종합청소업체',
     '입주청소',
     '이사청소',
@@ -36,13 +36,13 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'ko_KR',
     url: SITE_URL,
-    siteName: '청소다',
+    siteName: '로얄클린',
     images: [
       {
-        url: '/og-image.png?v=2',
+        url: '/og-image.png?v=3',
         width: 1200,
         height: 630,
-        alt: '청소다 - 종합청소업체 1위',
+        alt: '로얄클린 - 종합청소업체 1위',
       },
     ],
   },
@@ -50,11 +50,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: TITLE,
     description: DESCRIPTION,
-    images: ['/og-image.png?v=2'],
+    images: ['/og-image.png?v=3'],
   },
   icons: {
-    icon: '/logo/logo-mono-dark.png',
-    apple: '/logo/logo-mono-dark.png',
+    icon: '/logo/logo-icon.png',
+    apple: '/logo/logo-icon.png',
   },
   robots: { index: true, follow: true },
 };

@@ -63,7 +63,7 @@ export default function AdminPage() {
         >
           <div className="mb-6 text-center">
             <div className="text-xs font-bold uppercase tracking-[0.2em] text-navy-600">
-              청소다 어드민
+              로얄클린 어드민
             </div>
             <h1 className="mt-2 text-2xl font-extrabold text-ink">관리자 로그인</h1>
             <p className="mt-1.5 text-sm text-ink/60">비밀번호를 입력해 주세요.</p>

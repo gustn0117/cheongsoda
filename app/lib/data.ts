@@ -1,22 +1,24 @@
 export const COMPANY = {
-  name: '청소다',
-  nameEn: 'CHEONG SO DA',
+  name: '로얄클린',
+  nameEn: 'ROYAL CLEAN',
   tagline: '종합청소업체 본사',
-  phone: '010-7444-1535',
-  phoneTel: '01074441535',
-  kakao: 'http://pf.kakao.com/_wxctWn/chat',
-  kakaoHandle: 'pf.kakao.com/_wxctWn',
+  phone: '1599-1807',
+  phoneTel: '15991807',
+  mobile: '010-5000-0687',
+  mobileTel: '01050000687',
+  kakao: 'https://pf.kakao.com/_xfEKxjX/chat',
+  kakaoHandle: 'pf.kakao.com/_xfEKxjX',
   blog: 'https://blog.naver.com/cheongsoda',
   blogHandle: 'blog.naver.com/cheongsoda',
-  instagram: 'https://www.instagram.com/cheongso_da',
-  instagramHandle: '@cheongso_da',
-  soomgo: 'https://soomgo.com/profile/users/12040020',
-  soomgoHandle: 'soomgo.com/cheongsoda',
+  instagram: 'https://www.instagram.com/royalclean.kr',
+  instagramHandle: '@royalclean.kr',
+  soomgo: 'https://soomgo.com/profile/users/18306814',
+  soomgoHandle: 'soomgo.com/profile/users/18306814',
   youtube: 'https://www.youtube.com/@cheongsoda',
   youtubeHandle: '@cheongsoda',
   serviceArea: '서울 · 경기 · 인천 · 전국 직영팀 보유',
   hours: '연중무휴 · 오전 9시 ~ 오후 9시',
-  ceo: '청소다 본사',
+  ceo: '로얄클린 본사',
   insurance: '대물 1억원 영업 배상책임 보험 가입',
   team: '하청X · 알바X · 20~40대 직영팀 50팀 운영',
 };
@@ -131,7 +133,7 @@ export const PROMISES = [
   {
     no: '01',
     title: '하청·알바 없는 직영팀',
-    desc: '20~40대 베테랑으로만 구성된 직영팀 50팀 이상이 청소다 본사에서 직접 운영합니다.',
+    desc: '20~40대 베테랑으로만 구성된 직영팀 50팀 이상이 로얄클린 본사에서 직접 운영합니다.',
   },
   {
     no: '02',
@@ -157,7 +159,7 @@ export const PROMISES = [
 
 export const REVIEWS = Array.from({ length: 10 }, (_, i) => ({
   image: `/reviews/v2-review-${String(i + 1).padStart(2, '0')}.png`,
-  alt: `청소다 실제 고객 후기 ${i + 1}`,
+  alt: `로얄클린 실제 고객 후기 ${i + 1}`,
 }));
 
 export const FAQS = [
@@ -167,7 +169,7 @@ export const FAQS = [
   },
   {
     q: '피톤치드·스팀살균은 정말 무료인가요?',
-    a: '네, 청소다에 의뢰해 주신 모든 고객님께 피톤치드 살균과 고온 스팀 살균을 추가 비용 없이 기본 서비스로 제공합니다.',
+    a: '네, 로얄클린에 의뢰해 주신 모든 고객님께 피톤치드 살균과 고온 스팀 살균을 추가 비용 없이 기본 서비스로 제공합니다.',
   },
   {
     q: '청소 후 부족한 부분은 어떻게 처리되나요?',

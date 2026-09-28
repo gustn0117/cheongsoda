@@ -208,7 +208,7 @@ export default function CallCTA() {
                   실제 청소 과정 영상을 공개합니다
                 </p>
                 <div className="mt-5 text-base font-black sm:text-lg break-keep">
-                  영상으로 보는 청소다
+                  영상으로 보는 로얄클린
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-white/15 text-white backdrop-blur transition group-hover:scale-110 sm:h-12 sm:w-12">

@@ -41,7 +41,7 @@ export default function Pricing() {
             <span className="text-navy-600">정직한 견적</span>을 드립니다
           </h2>
           <p className="mt-4 text-sm text-ink/70 sm:mt-6 sm:text-lg break-keep">
-            전국 어디든 출장비 0원 · 평일·주말 동일 가격
+            전국 어디든 출장비 0원 · 평일·주말 동일 가격{' '}
             <br className="hidden sm:block" />
             추가 부분 발생 시에도 사전 안내 후 진행합니다.
           </p>

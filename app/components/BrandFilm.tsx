@@ -91,7 +91,7 @@ export default function BrandFilm() {
               <span className="text-[#FEE500]">새로운 시작</span>을 만듭니다
             </h2>
             <p className="mt-4 max-w-xl text-[15px] text-white/80 sm:mt-6 sm:text-lg break-keep">
-              하청·알바 없이 청소다 직영팀이 직접 현장에 나갑니다.
+              하청·알바 없이 로얄클린 직영팀이 직접 현장에 나갑니다.{' '}
               <br className="hidden sm:block" />
               입주·이사·거주청소의 실제 작업 과정을 영상으로 확인해 보세요.
             </p>
@@ -165,7 +165,7 @@ export default function BrandFilm() {
               {/* 컨트롤 */}
               <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 bg-gradient-to-t from-navy-950/80 to-transparent p-3 sm:p-4">
                 <span className="rounded-full bg-white/90 px-3 py-1 text-[11px] font-extrabold text-navy-700 sm:text-xs">
-                  청소다 실제 작업 영상
+                  로얄클린 실제 작업 영상
                 </span>
                 <div className="pointer-events-auto flex items-center gap-2">
                   <button

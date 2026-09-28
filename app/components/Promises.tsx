@@ -18,13 +18,13 @@ export default function Promises() {
         <div className="mx-auto max-w-3xl text-center">
           <span className="section-eyebrow">Our Promise</span>
           <h2 className="heading-section mt-3 text-[2rem] text-ink sm:mt-4 sm:text-5xl lg:text-6xl break-keep">
-            <span className="text-navy-600">&apos;청소다&apos;</span>
-            <span className="text-ink">가 </span>
+            <span className="text-navy-600">&apos;로얄클린&apos;</span>
+            <span className="text-ink">이 </span>
             <span className="text-[#FF8A3D]">고객님께 약속</span>
             <span className="text-ink"> 드리겠습니다.</span>
           </h2>
           <p className="mt-4 text-sm text-ink/70 sm:mt-6 sm:text-lg break-keep">
-            30대 청년들이 운영하는 청소다는
+            30대 청년들이 운영하는 로얄클린은
             <br />
             7년간의 청소팀장 경력과 노하우로,
             <br />
@@ -36,7 +36,7 @@ export default function Promises() {
           <div className="relative overflow-hidden rounded-3xl border border-navy-100 bg-white shadow-soft sm:rounded-[32px]">
             <img
               src="/team/group-shot.png"
-              alt="청소다 직영팀 단체샷"
+              alt="로얄클린 직영팀 단체샷"
               loading="lazy"
               className="block h-auto w-full"
             />
@@ -50,7 +50,7 @@ export default function Promises() {
                 </span>
               </div>
               <p className="mt-2 text-base font-extrabold text-white drop-shadow sm:text-xl break-keep">
-                하청·알바 없이 청소다 본사에서 직접 운영하는 직영팀입니다.
+                하청·알바 없이 로얄클린 본사에서 직접 운영하는 직영팀입니다.
               </p>
             </div>
           </div>
@@ -100,10 +100,10 @@ export default function Promises() {
           {/* Free benefits panel */}
           <aside className="rounded-2xl border border-navy-100 bg-white p-6 shadow-soft sm:rounded-3xl sm:p-8">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#FEE500]/15 px-3 py-1 text-[11px] font-bold text-[#9A7C00] sm:text-xs">
-              FREE · 청소다 무료 서비스
+              FREE · 로얄클린 무료 서비스
             </div>
             <h3 className="mt-4 text-xl font-extrabold text-ink sm:text-3xl break-keep">
-              청소다에 의뢰하면
+              로얄클린에 의뢰하면
               <br />
               <span className="text-navy-600">7가지 무료 혜택</span>이 따라옵니다
             </h3>

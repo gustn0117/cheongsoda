@@ -9,11 +9,11 @@ export default function Logo({ variant = 'navy', className = '' }: LogoProps) {
   return (
     <span
       className={`inline-flex items-center ${className}`}
-      aria-label="청소다 CHEONG SO DA"
+      aria-label="로얄클린 ROYAL CLEAN"
     >
       <img
         src={src}
-        alt="청소다"
+        alt="로얄클린"
         className="h-14 w-auto select-none sm:h-12"
         draggable={false}
       />

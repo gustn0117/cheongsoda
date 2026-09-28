@@ -8,11 +8,11 @@ export default function Showcase() {
           <div>
             <span className="section-eyebrow">Portfolio</span>
             <h2 className="heading-section mt-3 text-[1.75rem] text-ink sm:mt-4 sm:text-4xl lg:text-5xl break-keep">
-              청소다가 작업한 <span className="text-navy-600">현장의 기록</span>
+              로얄클린이 작업한 <span className="text-navy-600">현장의 기록</span>
             </h2>
           </div>
           <p className="max-w-md text-sm text-ink/65 sm:text-base break-keep">
-            매 현장마다 사진과 영상을 남겨 고객님께 투명하게 공유합니다.
+            매 현장마다 사진과 영상을 남겨 고객님께 투명하게 공유합니다.{' '}
             <br className="hidden sm:block" />
             마감의 차이를 직접 확인해 보세요.
           </p>

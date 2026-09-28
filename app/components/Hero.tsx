@@ -79,9 +79,9 @@ export default function Hero() {
               종합청소업체 <span className="text-[#FEE500]">1위</span>
               <br />
               <span className="text-[2.85rem] sm:text-[5rem] lg:text-[6.5rem] text-[#7DA0FF]">
-                청소다
+                로얄클린
               </span>
-              는 다릅니다
+              은 다릅니다
             </h1>
 
             <p className="mt-4 max-w-xl text-[15px] text-white/85 sm:mt-6 sm:text-xl break-keep">

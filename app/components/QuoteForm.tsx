@@ -74,7 +74,7 @@ export default function QuoteForm() {
               <span className="text-[#FEE500]">무료 견적</span>을 받아보세요
             </h2>
             <p className="mt-3 max-w-md text-[13px] text-white/80 sm:mt-6 sm:text-lg break-keep">
-              평수와 옵션만 알려주시면, 청소다 본사 직영팀에서 카카오톡으로 즉시 견적을
+              평수와 옵션만 알려주시면, 로얄클린 본사 직영팀에서 카카오톡으로 즉시 견적을
               안내드립니다. 전국 어디든 출장비 없이 동일한 가격으로 진행됩니다.
             </p>
 

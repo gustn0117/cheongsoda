@@ -12,7 +12,7 @@ export default function QuoteIntro() {
             이런 마감을 <span className="text-navy-600">약속드립니다</span>
           </h2>
           <p className="mt-4 text-sm text-ink/70 sm:mt-6 sm:text-lg break-keep">
-            청소다 직영팀이 실제로 작업한 결과의 일부입니다.
+            로얄클린 직영팀이 실제로 작업한 결과의 일부입니다.{' '}
             <br className="hidden sm:block" />
             아래에서 30초만에 견적을 신청하시면, 같은 마감으로 진행해 드립니다.
           </p>

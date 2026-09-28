@@ -9,7 +9,7 @@ import { CloseIcon, Instagram, MenuIcon, NaverBlog, Phone, Soomgo, YouTube } fro
 const NAV = [
   { id: 'services', label: '청소 서비스' },
   { id: 'process', label: '진행 절차' },
-  { id: 'promises', label: '청소다 약속' },
+  { id: 'promises', label: '로얄클린 약속' },
   { id: 'reviews', label: '고객 후기' },
   { id: 'pricing', label: '요금 안내' },
   { id: 'faq', label: 'FAQ' },
@@ -35,7 +35,7 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-1 px-2 py-3 sm:gap-3 sm:px-8 sm:py-3.5 lg:px-12">
-        <a href="#top" className="flex shrink-0 items-center" aria-label="청소다 홈">
+        <a href="#top" className="flex shrink-0 items-center" aria-label="로얄클린 홈">
           <Logo variant={scrolled ? 'navy' : 'white'} />
         </a>
 

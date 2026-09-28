@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <Logo variant="white" />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/65 break-keep">
-              청소다는 입주·이사·거주·상가청소를 전문으로 하는 종합청소업체 본사입니다.
+              로얄클린은 입주·이사·거주·상가청소를 전문으로 하는 종합청소업체 본사입니다.
               하청·알바 없이 직영팀 50팀 이상이 운영되며, 피톤치드·스팀살균을 모든 고객께 무료
               제공합니다.
             </p>
@@ -89,7 +89,7 @@ export default function Footer() {
           />
           <FooterCol
             title="고객 지원"
-            items={['견적 신청', '진행 절차', '청소다 약속', '자주 묻는 질문', '리뷰 페이백']}
+            items={['견적 신청', '진행 절차', '로얄클린 약속', '자주 묻는 질문', '리뷰 페이백']}
           />
           <div>
             <h4 className="text-sm font-bold uppercase tracking-[0.16em] text-white/60">
@@ -98,7 +98,15 @@ export default function Footer() {
             <ul className="mt-5 space-y-3 text-sm">
               <li>
                 <span className="block text-xs text-white/50">본사 대표번호</span>
-                <span className="number-tabular">{COMPANY.phone}</span>
+                <a href={`tel:${COMPANY.phoneTel}`} className="number-tabular transition hover:text-white">
+                  {COMPANY.phone}
+                </a>
+              </li>
+              <li>
+                <span className="block text-xs text-white/50">휴대폰</span>
+                <a href={`tel:${COMPANY.mobileTel}`} className="number-tabular transition hover:text-white">
+                  {COMPANY.mobile}
+                </a>
               </li>
               <li>
                 <span className="block text-xs text-white/50">서비스 지역</span>
@@ -165,7 +173,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
-          <span>© 2026 청소다 (CHEONG SO DA). All rights reserved.</span>
+          <span>© 2026 로얄클린 (ROYAL CLEAN). All rights reserved.</span>
           <div className="flex gap-5">
             <a href="#" className="hover:text-white">
               개인정보처리방침
