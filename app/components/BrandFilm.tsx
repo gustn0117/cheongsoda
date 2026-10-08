@@ -3,70 +3,54 @@
 import { useEffect, useRef, useState } from 'react';
 import { COMPANY, PHONES } from '@/app/lib/data';
 import { jumpToQuote } from '@/app/lib/scroll';
-import { ArrowRight, KakaoBubble, Pause, Phone, Play, SoundOff, SoundOn } from './Icons';
+import { ArrowRight, KakaoBubble, Phone, Play } from './Icons';
 
 const HIGHLIGHTS = ['하청·알바 NO', '전국 직영팀 50팀+', '5일 A/S 보장'];
 
+const YOUTUBE_ID = '8mS-Qn3wGoA';
+const YOUTUBE_ORIGIN = 'https://www.youtube-nocookie.com';
+
+// auto: 화면 진입으로 음소거 재생 / click: 재생 버튼을 눌러 소리와 함께 재생
+type PlayerMode = 'auto' | 'click';
+
 export default function BrandFilm() {
-  const videoRef = useRef<HTMLVideoElement>(null);
   const wrapRef = useRef<HTMLDivElement>(null);
-  const [playing, setPlaying] = useState(false);
-  const [muted, setMuted] = useState(true);
+  const frameRef = useRef<HTMLIFrameElement>(null);
+  const [mode, setMode] = useState<PlayerMode | null>(null);
 
-  /* 화면에 들어오면 음소거 재생, 벗어나면 정지 (모션 최소화 설정 시 자동재생 안 함) */
+  /* 화면에 들어오면 유튜브 플레이어를 불러와 음소거 재생, 벗어나면 정지 (모션 최소화 설정 시 자동재생 안 함) */
   useEffect(() => {
-    const v = videoRef.current;
     const wrap = wrapRef.current;
-    if (!v || !wrap) return;
+    if (!wrap || typeof IntersectionObserver === 'undefined') return;
 
-    v.muted = true;
+    const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 
-    const reduceMotion =
-      typeof window !== 'undefined' &&
-      window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-
-    const onPlay = () => setPlaying(true);
-    const onPause = () => setPlaying(false);
-    v.addEventListener('play', onPlay);
-    v.addEventListener('pause', onPause);
-
-    let io: IntersectionObserver | undefined;
-    if (!reduceMotion && typeof IntersectionObserver !== 'undefined') {
-      io = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            v.play().catch(() => undefined);
-          } else if (!v.paused) {
-            v.pause();
-          }
-        },
-        { threshold: 0.4 }
+    const command = (func: 'playVideo' | 'pauseVideo') =>
+      frameRef.current?.contentWindow?.postMessage(
+        JSON.stringify({ event: 'command', func, args: [] }),
+        YOUTUBE_ORIGIN
       );
-      io.observe(wrap);
-    }
 
-    return () => {
-      v.removeEventListener('play', onPlay);
-      v.removeEventListener('pause', onPause);
-      io?.disconnect();
-    };
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          command('pauseVideo');
+        } else if (!reduceMotion) {
+          setMode((m) => m ?? 'auto');
+          command('playVideo');
+        }
+      },
+      { threshold: 0.4 }
+    );
+    io.observe(wrap);
+
+    return () => io.disconnect();
   }, []);
 
-  const togglePlay = () => {
-    const v = videoRef.current;
-    if (!v) return;
-    if (v.paused) v.play().catch(() => undefined);
-    else v.pause();
-  };
-
-  const toggleSound = () => {
-    const v = videoRef.current;
-    if (!v) return;
-    const next = !v.muted;
-    v.muted = next;
-    setMuted(next);
-    if (!next && v.paused) v.play().catch(() => undefined);
-  };
+  const embedSrc =
+    mode &&
+    `${YOUTUBE_ORIGIN}/embed/${YOUTUBE_ID}?autoplay=1&mute=${mode === 'auto' ? 1 : 0}` +
+      `&loop=1&playlist=${YOUTUBE_ID}&playsinline=1&rel=0&enablejsapi=1`;
 
   return (
     <section
@@ -139,62 +123,40 @@ export default function BrandFilm() {
           {/* Player */}
           <div ref={wrapRef} className="mx-auto w-full max-w-[340px] lg:max-w-[400px]">
             <div className="relative aspect-[9/16] overflow-hidden rounded-[28px] border border-white/20 bg-navy-900 shadow-navy-lg sm:rounded-[32px]">
-              <video
-                ref={videoRef}
-                src="/videos/promo.mp4"
-                poster="/videos/promo-poster.jpg"
-                muted
-                loop
-                playsInline
-                preload="none"
+              <img
+                src="/videos/brand-film-poster.jpg"
+                alt="로얄클린 실제 작업 영상 미리보기"
+                loading="lazy"
                 className="h-full w-full object-cover"
               />
 
-              {/* 재생/일시정지 (영상 전체 클릭) */}
-              <button
-                type="button"
-                onClick={togglePlay}
-                aria-label={playing ? '영상 일시정지' : '영상 재생'}
-                className="absolute inset-0 grid place-items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FEE500]"
-              >
-                <span
-                  className={`grid h-16 w-16 place-items-center rounded-full bg-white/90 text-navy-700 shadow-soft transition ${
-                    playing ? 'opacity-0' : 'opacity-100'
-                  }`}
+              {/* 플레이어를 불러오기 전에는 포스터 + 재생 버튼, 불러온 뒤에는 유튜브 기본 컨트롤 사용 */}
+              {embedSrc ? (
+                <iframe
+                  ref={frameRef}
+                  src={embedSrc}
+                  title="로얄클린 실제 작업 영상"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="absolute inset-0 h-full w-full"
+                />
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setMode('click')}
+                  aria-label="영상 재생"
+                  className="absolute inset-0 grid place-items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FEE500]"
                 >
-                  <Play size={24} className="ml-0.5" />
-                </span>
-              </button>
-
-              {/* 컨트롤 */}
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 bg-gradient-to-t from-navy-950/80 to-transparent p-3 sm:p-4">
-                <span className="rounded-full bg-white/90 px-3 py-1 text-[11px] font-extrabold text-navy-700 sm:text-xs">
-                  로얄클린 실제 작업 영상
-                </span>
-                <div className="pointer-events-auto flex items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={togglePlay}
-                    aria-label={playing ? '영상 일시정지' : '영상 재생'}
-                    className="grid h-11 w-11 place-items-center rounded-full border border-white/30 bg-navy-950/60 text-white backdrop-blur transition hover:bg-navy-950/85"
-                  >
-                    {playing ? <Pause size={16} /> : <Play size={16} className="ml-0.5" />}
-                  </button>
-                  <button
-                    type="button"
-                    onClick={toggleSound}
-                    aria-label={muted ? '소리 켜기' : '소리 끄기'}
-                    aria-pressed={!muted}
-                    className="grid h-11 w-11 place-items-center rounded-full border border-white/30 bg-navy-950/60 text-white backdrop-blur transition hover:bg-navy-950/85"
-                  >
-                    {muted ? <SoundOff size={17} /> : <SoundOn size={17} />}
-                  </button>
-                </div>
-              </div>
+                  <span className="grid h-16 w-16 place-items-center rounded-full bg-white/90 text-navy-700 shadow-soft">
+                    <Play size={24} className="ml-0.5" />
+                  </span>
+                </button>
+              )}
             </div>
 
             <p className="mt-3 text-center text-xs text-white/55 break-keep">
-              소리를 켜고 보시면 더 자세한 설명을 들으실 수 있어요
+              로얄클린 실제 작업 영상 · 소리를 켜고 보시면 더 생생해요
             </p>
           </div>
         </div>
